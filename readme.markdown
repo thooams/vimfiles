@@ -1,7 +1,0 @@
-# Setup-linux
-
-Installation des fichiers dont j'ai besoin pour configurer mon linux.
-
-# License
-
-Thooams
