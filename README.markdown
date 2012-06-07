@@ -10,6 +10,7 @@ Installation des fichiers dont j'ai besoin pour configurer mon linux.
 5. Creer un dossier .bashrc
 4. Creer un fichier .bashrc
 4. Ajouter l'ecriture du bash avec le nom de la branch git dans .bashrc
+5. Installer des packages
 
 ## Installer eime
 
