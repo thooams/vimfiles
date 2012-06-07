@@ -2,7 +2,7 @@
 
 Installation des fichiers dont j'ai besoin pour configurer mon linux.
 
-# Configurer environnement  linux
+## Configurer environnement  linux
 
 1. Ajouter le dossier .ssh
 2. Ajouter le fichier .gitconf
@@ -11,7 +11,7 @@ Installation des fichiers dont j'ai besoin pour configurer mon linux.
 4. Creer un fichier .bashrc
 4. Ajouter l'ecriture du bash avec le nom de la branch git dans .bashrc
 
-# Installer eime
+## Installer eime
 
 1. Installer les packages
 2. Installer rvm ( et .zshrc)
@@ -24,6 +24,6 @@ Installation des fichiers dont j'ai besoin pour configurer mon linux.
 7. Creer une base de données
 8. Ajouter livereload
 
-# License
+## License
 
 Thooams
