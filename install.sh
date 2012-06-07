@@ -8,3 +8,6 @@
 # Thooams (aka) Thomas
 # Distributed under the GPL version 3 license
 #
+
+# install curl 
+
