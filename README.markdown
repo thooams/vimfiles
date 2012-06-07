@@ -1,6 +1,15 @@
 # Setup-linux
 
-Installation des fichiers dont j'ai besoin pour configurer mon linux.
+Installation des fichiers pour configurer mon linux.
+
+L'installation globale comprend :
+* configuration de l'environnement Linux
+* installer environnement pour EIME
+
+Pour l'installation globale taper :
+$ wget https://raw.github.com/thooams/setup-linux/master/install.rb
+$ chmod install.sh
+$ sudo ./install.sh
 
 ## Configurer environnement  linux
 
@@ -10,7 +19,7 @@ Installation des fichiers dont j'ai besoin pour configurer mon linux.
 5. Creer un dossier .bashrc
 4. Creer un fichier .bashrc
 4. Ajouter l'ecriture du bash avec le nom de la branch git dans .bashrc
-5. Installer des packages
+5. Installer des packages(dropbox, curl)
 
 ## Installer eime
 
