@@ -4,7 +4,7 @@
 # Copyright (C) 2011 Thomas HUMMEL
 
 # Infos
-version='CODDE v.2.5'
+version='CODDE v.2.6'
 usage="
 Utilisation : codde [-OPTION]...
 
@@ -26,10 +26,11 @@ Permet d'etre rediriger vers le dossier codde-eime et executer 'rvm'
 
 Il est préférable de lancer l'option -s si l'on veut lancer -bg, -f, ou -d
 "
+
 # Répertoires
-eime="$HOME/codde-eime"
-rt="$HOME/request_tracker"
-infra="$HOME/eime-infra"
+eime="$HOME/Apps/codde-eime"
+rt="$HOME/Apps/request_tracker"
+infra="$HOME/Apps/eime-infra"
 
 # Commandes
 bundle_foreman="bundle exec foreman start -f Procfile.linux"
@@ -59,8 +60,8 @@ if test $# = 0; then
 		eval $cd;
 		exit 0
 	fi
-else	
-		
+else
+
 	if [ "$1" = "-d" ]; then
 		if [ "$2" = "eime" ]; then
 			eval "cd $eime && exec /bin/bash";
