@@ -22,8 +22,11 @@ LISTE=""
 sudo apt-add-repository ppa:ubuntu-on-rails/ppa
 
 
-# Ajout des packages par défaut 
+# Ajout des packages par défaut
 LISTE=$LISTE" curl screen vim git git-core"
+
+# Ajout de la liste pour l'environnement EIME
+LISTE=$LISTE" ruby1.8 postgresql build-essential zlib1g-dev libssl-dev libreadline5-dev libxml2-dev libxslt1-dev libpq-dev"
 
 #==============================================================================
 
