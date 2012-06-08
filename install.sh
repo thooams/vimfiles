@@ -80,6 +80,12 @@ apt-get install $LISTE
 # Restart Nautilus
 nautilus -q
 
+# installation du script CODDE
+cd ~
+git clone https://github.com/thooams/setup-linux.git ~/setup
+cp ~/setup/codde /usr/bin/codde
+rm -rf setup
+
 echo "========================================================================"
 echo
 echo "Liste des logiciels installés: $LISTE"
