@@ -9,3 +9,4 @@ cd ~/.vim
 git submodule init
 git submodule update
 mkdir undodir
+./update.sh
