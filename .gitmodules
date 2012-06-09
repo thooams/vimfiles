@@ -1,7 +1,7 @@
 [submodule "bundle"]
   path = bundle
   url = https://github.com/mrtazz/molokai.vim.git
-      [submodule "bundle/molokai"]
+[submodule "bundle/molokai"]
   path = bundle/molokai
   url = https://github.com/mrtazz/molokai.vim.git
 [submodule "bundle/fugitive"]
@@ -79,3 +79,6 @@
 [submodule "submodulebundle/jade"]
   path = bundle/jade
   url = https://github.com/digitaltoad/vim-jade.git
+[submodule "submodulebundle/nerdtree"]
+  path = bundle/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git

@@ -188,3 +188,6 @@ command! W :w
 " Enable mouse scrolling
 set mouse=a
 set ttymouse=xterm
+
+" nerd tree at start
+autocmd vimenter * if !argc() | NERDTree | endif
