@@ -1,7 +1,7 @@
 vimfiles
 ========
 
-Configuration de vim ainsi que ses bundle
+Configuration de vim ainsi que ses bundles
 
 # Bundles
 1. vim-endwise                      : ajoute des END pour les IF, DEF, DO ...
@@ -23,3 +23,9 @@ Configuration de vim ainsi que ses bundle
 17. vim-symbols-strings             : convertie les chaines de carateres en symbole et vice et versa.
 18. tabular                         : permet une indentation globale ou par expression réguliere
 19. taglist                         : permet la navigation dans entre fichiers sources
+
+## auto install
+```
+bash <(curl -s https://raw.github.com/thooams/vimfiles/master/install.sh)
+```
+
