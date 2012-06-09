@@ -1,7 +1,7 @@
 vimfiles
 ========
 
-Configuration de vim ainsi que ses bundlea
+Configuration de vim ainsi que ses bundle
 
 # Bundles
 1. vim-endwise                      : ajoute des END pour les IF, DEF, DO ...
