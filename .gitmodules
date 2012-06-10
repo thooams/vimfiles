@@ -77,5 +77,5 @@
   path = bundle/jade
   url = https://github.com/digitaltoad/vim-jade.git
 [submodule "bundle/nerdtree"]
-  path = bundle/nerdtree
-  url = https://github.com/scrooloose/nerdtree.git
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
