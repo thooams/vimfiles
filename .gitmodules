@@ -54,25 +54,25 @@
   url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/coffeescript"]
   path = bundle/coffeescript
-  url = git://github.com/kchmck/vim-coffee-script.git
+  url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/buffkill"]
   path = bundle/buffkill
-  url = git://github.com/hced/bufkill-vim.git
+  url = https://github.com/hced/bufkill-vim.git
 [submodule "bundle/pasta"]
   path = bundle/pasta
-  url = git://github.coffeescriptm/sickill/vim-pasta.git
+  url = https://github.coffeescriptm/sickill/vim-pasta.git
 [submodule "bundle/taglist"]
   path = bundle/taglistlist
-  url = git://github.com/vim-scripts/taglist.vim.git
+  url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/symbols-strings"]
   path = bundle/symbols-strings
-  url = git://github.com/rorymckinley/vim-symbols-strings.git
+  url = https://github.com/rorymckinley/vim-symbols-strings.git
 [submodule "bundle/handlebars"]
   path = bundle/handlebars
-  url = git://github.com/nono/vim-handlebars.gitit
+  url = https://github.com/nono/vim-handlebars.git
 [submodule "bundle/slim"]
   path = bundle/slim
-  url = git://github.coffeescriptmm/bbommarito/vim-slim.git
+  url = https://github.coffeescriptmm/bbommarito/vim-slim.git
 [submodule "bundle/jade"]
   path = bundle/jade
   url = https://github.com/digitaltoad/vim-jade.git
