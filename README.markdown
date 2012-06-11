@@ -10,8 +10,14 @@ Pour l'installation taper :
 
 ```
 $ wget https://raw.github.com/thooams/setup-linux/master/install.rb
-$ chmod install.sh
+$ chmod a+x install.sh
 $ sudo ./install.sh
+```
+
+Installer le theme gnome terminal tomorrow-night
+ ```
+$ chmod a+x  setup-gnome-terminal-theme.sh
+$ ./setup-gnome-terminal-theme.sh
 ```
 
 ## License
