@@ -24,6 +24,11 @@ Configuration de vim ainsi que ses bundles
 18. tabular                         : permet une indentation globale ou par expression réguliere
 19. taglist                         : permet la navigation dans entre fichiers sources
 20. nerdtree                        : ajoute une exploreur navigation et permet de spliter vim en plusieurs parties
+21. cuteErrorMaker                  : montre les erreurs de code ainsi que les warnings
+
+# autoload
+1. pathogen
+2. rubycomplete
 
 ## auto install
 ```
