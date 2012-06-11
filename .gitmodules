@@ -91,3 +91,9 @@
 [submodule "bundle/CuteErrorMaker"]
 	path = bundle/CuteErrorMaker
 	url = https://github.com/Twinside/vim-cuteErrorMarker.git
+[submodule "bundle/railscasts"]
+	path = bundle/railscasts
+	url = https://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git
+[submodule "bundle/twilight"]
+	path = bundle/twilight
+	url = https://github.com/scottymoon/vim-twilight.git

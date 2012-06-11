@@ -22,7 +22,8 @@ set nowritebackup
 set noswapfile
 
 " molokai theme for macvim and vim
-color molokai
+" color molokai
+color Tomorrow-Night
 set t_Co=256
 
 " Indentation
