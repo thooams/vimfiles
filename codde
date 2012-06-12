@@ -28,9 +28,10 @@ Il est préférable de lancer l'option -s si l'on veut lancer -bg, -f, ou -d
 "
 
 # Répertoires
-eime="$HOME/Apps/codde-eime"
-rt="$HOME/Apps/request_tracker"
-infra="$HOME/Apps/eime-infra"
+root_rp="$HOME/Apps/"
+eime="$root_rp/codde-eime"
+rt="$root_rp/Apps/request_tracker"
+infra="$root_rp/Apps/eime-infra"
 
 # Commandes
 bundle_foreman="bundle exec foreman start -f Procfile.linux"
@@ -40,7 +41,7 @@ rubymine="/opt/RubyMine/bin/rubymine.sh"
 chrome="/opt/google/chrome/google-chrome"
 faye="$HOME/.rvm/gems/ruby-1.8.7-p358@codde-eime/bin/rackup faye.ru -s thin -E production"
 delayed_job="script/delayed_job restart && sleep 999999"
-cd="cd $HOME/codde-eime && exec $SHELL";
+cd="cd $root_rp/codde-eime && exec $SHELL";
 
 # Messages d'erreurs
 CHERROR="CODDE: Erreur: Le chemin est invalide, veuillez indiquer un répertoire valide"

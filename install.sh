@@ -82,9 +82,12 @@ nautilus -q
 
 # installation du script CODDE
 cd ~
-git clone https://github.com/thooams/setup-linux.git ~/setup
-cp ~/setup/codde /usr/bin/codde
-rm -rf setup
+if [ ! -d "Apps" ]; then
+    mkdir Apps
+fi
+git clone https://github.com/thooams/setup-linux.git ~/Apps/setup-linux
+ln -s ~/Apps/setup-linux/codde /usr/bin/codde
+
 
 echo "========================================================================"
 echo
