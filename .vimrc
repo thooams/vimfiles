@@ -176,7 +176,11 @@ function! s:align()
 endfunction
 
 " TagList configuration
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+if has("gui_macvim")
+  let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+else
+  let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+endif
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 let Tlist_Process_File_Always = 1
@@ -195,5 +199,3 @@ set ttymouse=xterm
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <F2> :NERDTreeToggle<CR>
-
-
