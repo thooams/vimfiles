@@ -25,6 +25,8 @@ Configuration de vim ainsi que ses bundles
 19. taglist                         : permet la navigation dans entre fichiers sources
 20. nerdtree                        : ajoute une exploreur navigation et permet de spliter vim en plusieurs parties
 21. cuteErrorMaker                  : montre les erreurs de code ainsi que les warnings
+22. Nercommenter                    : ajouter des commentaires
+23. vimspell                        : verificateur d'orthographe EN
 
 # autoload
 1. pathogen

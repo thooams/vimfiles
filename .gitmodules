@@ -97,3 +97,9 @@
 [submodule "bundle/twilight"]
 	path = bundle/twilight
 	url = https://github.com/scottymoon/vim-twilight.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vimspell"]
+	path = bundle/vimspell
+	url = https://github.com/vim-scripts/vimspell.git
