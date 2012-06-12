@@ -76,7 +76,7 @@ set listchars+=extends:>          " The character to show in the last column whe
                                   " off and the line continues beyond the right of the scree
 
 " configure ctrlp
-let g:ctrlp_map = '<Leader>p'                      " keyboard shortcur
+let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
 let g:ctrlp_working_path_mode = 2              " set the working dir at  the nearest ancestor that contains .git
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so " ignore some files
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
@@ -176,9 +176,10 @@ function! s:align()
 endfunction
 
 " TagList configuration
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+let Tlist_Process_File_Always = 1
 
 " Paste mode
 set pastetoggle=<F2>
@@ -193,3 +194,6 @@ set ttymouse=xterm
 " nerd tree at start
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <F2> :NERDTreeToggle<CR>
+
+
