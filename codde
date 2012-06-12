@@ -4,7 +4,7 @@
 # Copyright (C) 2011 Thomas HUMMEL
 
 # Infos
-version='CODDE v.2.6'
+version='CODDE v.2.7'
 usage="
 Utilisation : codde [-OPTION]...
 
@@ -40,7 +40,7 @@ rubymine="/opt/RubyMine/bin/rubymine.sh"
 chrome="/opt/google/chrome/google-chrome"
 faye="$HOME/.rvm/gems/ruby-1.8.7-p358@codde-eime/bin/rackup faye.ru -s thin -E production"
 delayed_job="script/delayed_job restart && sleep 999999"
-cd="cd $HOME/codde-eime && exec /bin/bash";
+cd="cd $HOME/codde-eime && exec $SHELL";
 
 # Messages d'erreurs
 CHERROR="CODDE: Erreur: Le chemin est invalide, veuillez indiquer un répertoire valide"
@@ -64,13 +64,13 @@ else
 
 	if [ "$1" = "-d" ]; then
 		if [ "$2" = "eime" ]; then
-			eval "cd $eime && exec /bin/bash";
+			eval "cd $eime && exec $SHELL";
 			exit 0
 		elif [ "$2" = "rt" ]; then
-			eval "cd $rt && exec /bin/bash";
+			eval "cd $rt && exec $SHELL";
 			exit 0
 		elif [ "$2" = "infra" ]; then
-			eval "cd $infra && exec /bin/bash";
+			eval "cd $infra && exec $SHELL";
 			exit 0
 		else
 			echo "Repertoire inconnue";
