@@ -15,6 +15,7 @@ syntax on
 
 " encoding
 set encoding=utf-8
+set fileencoding=utf-8
 
 " Turn off backup and swp files
 set nobackup
@@ -181,8 +182,9 @@ if has("gui_macvim")
 else
   let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 endif
+
 let Tlist_WinWidth = 50
-map <F4> :TlistToggle<cr>
+map <f6> :TlistToggle<cr>
 let Tlist_Process_File_Always = 1
 
 " Paste mode
@@ -198,4 +200,5 @@ set ttymouse=xterm
 " nerd tree at start
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <F2> :NERDTreeToggle<CR>
+map <f5> :NERDTreeToggle<CR>
+
