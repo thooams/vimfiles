@@ -28,7 +28,7 @@ Il est préférable de lancer l'option -s si l'on veut lancer -bg, -f, ou -d
 "
 
 # Répertoires
-root_rp="$HOME/Apps/"
+root_rp="$HOME/Apps"
 eime="$root_rp/codde-eime"
 rt="$root_rp/request_tracker"
 infra="$root_rp/eime-infra"
