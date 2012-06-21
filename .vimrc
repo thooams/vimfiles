@@ -198,7 +198,22 @@ set mouse=a
 set ttymouse=xterm
 
 " nerd tree at start
-autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <f5> :NERDTreeToggle<CR>
 
+" map move line up/down
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
+
+
+" Grep
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+nnoremap :seime :call Seime()
+function! Seime()
+  let search=input("Séquence à rechercher dans le répertoire eime ?")
+  execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
+endfunction
