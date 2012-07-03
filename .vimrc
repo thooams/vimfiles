@@ -69,10 +69,9 @@ set expandtab                     " use spaces, not tabs
 
 " invisibles
 set list                          " Show invisible characters
-set listchars=""
 set listchars=""                  " Reset the listchars
-set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
-set listchars+=trail:·            " show trailing spaces as middle dots
+set listchars+=tab:\|\            " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:_            " show trailing spaces as middle dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the scree
 
@@ -146,7 +145,6 @@ set foldlevel=1         "this is just what i use
 set foldmethod=manual
 
 " Faster scrolling
-set ttyfast
 set showcmd
 set lazyredraw
 
@@ -224,6 +222,6 @@ map tc :tabclose<CR>
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nnoremap :seime :call Seime()
 function! Seime()
-  let search=input("Séquence à rechercher dans le répertoire eime ?")
+  let search=input("Séquence� rechercher dans le répertoire eime ?")
   execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
 endfunction
