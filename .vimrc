@@ -182,6 +182,7 @@ if has("gui_macvim")
 else
   let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 endif
+set tags=tags
 
 let Tlist_WinWidth = 50
 map <f6> :TlistToggle<cr>
@@ -209,6 +210,15 @@ inoremap <A-k> <Esc>:m-2<CR>==gi
 vnoremap <A-j> :m'>+<CR>gv=gv
 vnoremap <A-k> :m-2<CR>gv=gv
 
+" tab shortcut
+map th :tabfirst<CR>
+map tj :tabnext<CR>
+map tk :tabprev<CR>
+map tl :tablast<CR>
+map tt :tabedit<Space>
+map tm :tabm<Space>
+map tn :tabnew<CR>
+map tc :tabclose<CR>
 
 " Grep
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>

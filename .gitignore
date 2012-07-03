@@ -11,7 +11,7 @@
 
  *.DS_Store
  bundle/.DS_Store
- undodir/
+ undodir/*
  undodir
 .netrwhist
 tags
