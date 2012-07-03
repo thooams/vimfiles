@@ -1,5 +1,5 @@
  # OS generated files #
-######################
+#####################
  .DS_Store
  .DS_Store?
  ._*
@@ -8,10 +8,10 @@
  Icon?
  ehthumbs.db
  Thumbs.db
-
  *.DS_Store
  bundle/.DS_Store
- undodir/*
+ undodir/
  undodir
 .netrwhist
 tags
+bundle/vimspell
