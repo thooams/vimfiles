@@ -71,7 +71,7 @@ set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set listchars=""                  " Reset the listchars
 set listchars+=tab:\|\            " a tab should display as "  ", trailing whitespace as "."
-set listchars+=trail:_            " show trailing spaces as middle dots
+set listchars+=trail:·            " show trailing spaces as middle dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the scree
 
