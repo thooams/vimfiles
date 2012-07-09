@@ -6,6 +6,8 @@ call pathogen#infect()
 " no vi compatibility
 set nocompatible
 
+" remap leader key
+let mapleader=","
 
 " filetype detection an syntax highlighting
 filetype plugin indent on
@@ -20,7 +22,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" tomorrow theme
+" molokai theme for macvim and vim
+" color molokai
 color Tomorrow-Night
 set t_Co=256
 
@@ -77,6 +80,26 @@ let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
 let g:ctrlp_working_path_mode = 2              " set the working dir at  the nearest ancestor that contains .git
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so " ignore some files
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
+" Make it easier to complete buffers, open files, etc...
+
+" Desactivate Ex-mode
+map Q <Nop>
+
+" Don't use thats nasty arrows
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+inoremap jj <ESC>
+
+" better navigation in splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Make searches case-sensitive only if they contain upper-case characters
 set ignorecase
@@ -166,6 +189,8 @@ let Tlist_Process_File_Always = 1
 " Paste mode
 set pastetoggle=<F2>
 
+" :W write the file as :w
+command! W :w
 
 " Enable mouse scrolling
 set mouse=a
@@ -175,6 +200,13 @@ set ttymouse=xterm
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <f5> :NERDTreeToggle<CR>
 
+" map move line up/down
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
 
 " tab shortcut
 map th :tabfirst<CR>
@@ -193,5 +225,3 @@ function! Seime()
   let search=input("Séquence� rechercher dans le répertoire eime ?")
   execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
 endfunction
-
-source ~/.vimrc.bepo
