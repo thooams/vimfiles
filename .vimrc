@@ -194,6 +194,7 @@ function! Seime()
   execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
 endfunction
 
+" config vim with bépo
 if !empty(system("setxkbmap -print|grep bepo"))
-      source ~/.vimrc.bepo
+      source ~/Apps/vimfiles/.vimrc.bepo
 endif

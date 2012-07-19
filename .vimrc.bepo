@@ -125,6 +125,14 @@ noremap <BS> <PageUp>
 noremap <Space> <PageDown>
 
 
-
+" tab shortcut
+map tc :tabfirst<CR>
+map tj :tabnext<CR>
+map tk :tabprev<CR>
+map tl :tablast<CR>
+map tt :tabedit<Space>
+map tm :tabm<Space>
+map t; :tabnew<CR>
+map tc :tabclose<CR>
 
 
