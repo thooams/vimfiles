@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Copyright (C) 2011, Societe CODDE
@@ -37,7 +38,7 @@ infra="$root_rp/eime-infra"
 bundle_foreman="bundle exec foreman start -f Procfile.linux"
 livereload="livereload"
 webrick="script/server"
-rubymine="/opt/RubyMine/bin/rubymine.sh"
+rubymine="/usr/bin/rubymine.sh"
 chrome="/opt/google/chrome/google-chrome"
 faye="$HOME/.rvm/gems/ruby-1.8.7-p358@codde-eime/bin/rackup faye.ru -s thin -E production"
 delayed_job="script/delayed_job restart && sleep 999999"
