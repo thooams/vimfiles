@@ -1,9 +1,9 @@
 ""
 "" mapping du clavier bépo->qwerty en mode normal
 ""
- 
+
 " configuration des lettres
- 
+
 noremap b q
 noremap é w
 noremap p e
@@ -78,13 +78,13 @@ noremap Q M
 noremap G <
 noremap H >
 noremap F ?
- 
+
 " configuration du copié sur le ç car y est sur la touche composé ^
- 
+
 noremap ç y
- 
+
 " configuration des nombres
- 
+
 noremap $ `
 noremap " 1
 noremap « 2
@@ -120,19 +120,7 @@ match NbSp /\%xa0/
 set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<
 set list
 
-" Utiliser les touches Backspace et espace pour descendre ou monter la page 
+" Utiliser les touches Backspace et espace pour descendre ou monter la page
 noremap <BS> <PageUp>
 noremap <Space> <PageDown>
-
-
-" tab shortcut
-map tc :tabfirst<CR>
-map tj :tabnext<CR>
-map tk :tabprev<CR>
-map tl :tablast<CR>
-map tt :tabedit<Space>
-map tm :tabm<Space>
-map t; :tabnew<CR>
-map tc :tabclose<CR>
-
 
