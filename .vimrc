@@ -92,8 +92,6 @@ set ttyfast
 set scrolloff=3
 
 " configure search
-nnoremap / /\v
-vnoremap / /\v
 set gdefault
 set incsearch
 set showmatch
@@ -109,8 +107,6 @@ map <leader>c :Hammer<CR>
 set backspace=2
 set backspace=indent,eol,start
 
-" Switch from last two buffers
-nnoremap <leader><leader> <c-^>
 
 " Activate ruby code folding
 set foldmethod=syntax
@@ -134,8 +130,6 @@ set virtualedit=all
 " Text width to 80 characters
 set textwidth=80
 
-" Use the bufkill plugin to eliminate a buffer but keep the window layout
-nmap ,bd :BD<cr>
 
 "Automate tabularization of cucumber features
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
@@ -175,17 +169,6 @@ set ttymouse=xterm
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <f5> :NERDTreeToggle<CR>
 
-
-" tab shortcut
-map th :tabfirst<CR>
-map tj :tabnext<CR>
-map tk :tabprev<CR>
-map tl :tablast<CR>
-map tt :tabedit<Space>
-map tm :tabm<Space>
-map tn :tabnew<CR>
-map tc :tabclose<CR>
-
 " Grep
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nnoremap :seime :call Seime()
@@ -194,7 +177,5 @@ function! Seime()
   execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
 endfunction
 
-" config vim with bépo
-if !empty(system("setxkbmap -print|grep bepo"))
-      source ~/Apps/vimfiles/.vimrc.bepo
-endif
+source ~/Apps/vimfiles/.vimrc.bepo
+
