@@ -153,21 +153,13 @@ else
 endif
 set tags=tags
 
-let Tlist_WinWidth = 50
-map <f6> :TlistToggle<cr>
-let Tlist_Process_File_Always = 1
-
 " Paste mode
 set pastetoggle=<F2>
-
 
 " Enable mouse scrolling
 set mouse=a
 set ttymouse=xterm
 
-" nerd tree at start
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <f5> :NERDTreeToggle<CR>
 
 " Grep
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
@@ -179,3 +171,10 @@ endfunction
 
 source ~/Apps/vimfiles/.vimrc.bepo
 
+" nerd tree at start
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <f5> :NERDTreeToggle<CR>
+
+let Tlist_WinWidth = 50
+map <f6> :TlistToggle<cr>
+let Tlist_Process_File_Always = 1
