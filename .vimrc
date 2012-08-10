@@ -15,8 +15,6 @@ set nocompatible
 " bépo -> qwerty ergonomie
 " source ~/Apps/vimfiles/.vimrc.bepo
 
-=======
->>>>>>> 16b0130c0c185ff8ddd79c163b61797e191382ed
 " filetype detection an syntax highlighting
 filetype plugin indent on
 syntax on
