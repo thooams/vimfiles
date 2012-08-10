@@ -169,12 +169,18 @@ function! Seime()
   execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
 endfunction
 
-source ~/Apps/vimfiles/.vimrc.bepo
 
 " nerd tree at start
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd vimenter * if !argc() | NERDTree | endif
 map <f5> :NERDTreeToggle<CR>
 
 let Tlist_WinWidth = 50
 map <f6> :TlistToggle<cr>
 let Tlist_Process_File_Always = 1
+
+source ~/Apps/vimfiles/.vimrc.bepo
+
+" tab navigation
+:nmap <C-t> <Esc>:tabnew<CR>
+:imap <C-t> <Esc>:tabnew<CR>
+:map <C-t> <Esc>:tabnew<CR>

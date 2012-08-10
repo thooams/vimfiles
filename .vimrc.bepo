@@ -21,7 +21,7 @@ noremap u s
 noremap i d
 noremap e f
 noremap \ \
-noremap g ,
+noremap , g
 noremap c h
 noremap t j
 noremap s k
@@ -114,7 +114,6 @@ noremap ` +
 
 " colorise les nbsp
 highlight NbSp ctermbg=lightgray guibg=lightred
-match NbSp /\%xa0/
 
 " Faire apparaître les insécable avec un autre caractère
 set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<
