@@ -6,6 +6,8 @@ call pathogen#infect()
 " no vi compatibility
 set nocompatible
 
+" bépo -> qwerty ergonomie
+source ~/Apps/vimfiles/.vimrc.bepo
 
 " filetype detection an syntax highlighting
 filetype plugin indent on
@@ -104,13 +106,13 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Hammer configuration
-map <leader>c :Hammer<CR>
+" map <leader>c :Hammer<CR>
 
 set backspace=2
 set backspace=indent,eol,start
 
 " Switch from last two buffers
-nnoremap <leader><leader> <c-^>
+" nnoremap <leader><leader> <c-^>
 
 " Activate ruby code folding
 set foldmethod=syntax
@@ -152,7 +154,7 @@ function! s:align()
 endfunction
 
 " TagList configuration
-if has("gui_macvim")
+if system("uname") == "Darwin\n"
   let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 else
   let Tlist_Ctags_Cmd = "/usr/bin/ctags"
@@ -177,14 +179,14 @@ map <f5> :NERDTreeToggle<CR>
 
 
 " tab shortcut
-map th :tabfirst<CR>
-map tj :tabnext<CR>
-map tk :tabprev<CR>
-map tl :tablast<CR>
-map tt :tabedit<Space>
-map tm :tabm<Space>
-map tn :tabnew<CR>
-map tc :tabclose<CR>
+" map th :tabfirst<CR>
+" map tj :tabnext<CR>
+" map tk :tabprev<CR>
+" map tl :tablast<CR>
+" map tt :tabedit<Space>
+" map tm :tabm<Space>
+" map tn :tabnew<CR>
+" map tc :tabclose<CR>
 
 " Grep
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
@@ -195,6 +197,7 @@ function! Seime()
 endfunction
 
 " config vim with bépo
-if !empty(system("setxkbmap -print|grep bepo"))
-      source ~/Apps/vimfiles/.vimrc.bepo
-endif
+" if !empty(system("setxkbmap -print|grep bepo"))
+"      source ~/Apps/vimfiles/.vimrc.bepo
+" endif
+
