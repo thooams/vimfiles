@@ -89,17 +89,20 @@
   path = bundle/nerdtree
   url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/CuteErrorMaker"]
-	path = bundle/CuteErrorMaker
-	url = https://github.com/Twinside/vim-cuteErrorMarker.git
+  path = bundle/CuteErrorMaker
+  url = https://github.com/Twinside/vim-cuteErrorMarker.git
 [submodule "bundle/railscasts"]
-	path = bundle/railscasts
-	url = https://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git
+  path = bundle/railscasts
+  url = https://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git
 [submodule "bundle/twilight"]
-	path = bundle/twilight
-	url = https://github.com/scottymoon/vim-twilight.git
+  path = bundle/twilight
+  url = https://github.com/scottymoon/vim-twilight.git
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
+  path = bundle/nerdcommenter
+  url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vimspell"]
-	path = bundle/vimspell
-	url = https://github.com/vim-scripts/vimspell.git
+  path = bundle/vimspell
+  url = https://github.com/vim-scripts/vimspell.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
