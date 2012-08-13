@@ -13,7 +13,7 @@ call pathogen#infect()
 set nocompatible
 
 " bépo -> qwerty ergonomie
-" source ~/Apps/vimfiles/.vimrc.bepo
+source ~/Apps/vimfiles/.vimrc.bepo
 
 " filetype detection an syntax highlighting
 filetype plugin indent on
@@ -108,11 +108,6 @@ set mousehide
 
 " Allow the cursor to go in to "invalid" places
 set virtualedit=all
-
-" tab navigation
-:nmap <C-t> <Esc>:tabnew<CR>
-:imap <C-t> <Esc>:tabnew<CR>
-:map <C-t> <Esc>:tabnew<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
