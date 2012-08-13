@@ -47,6 +47,9 @@ set undolevels=1000
 " desactivate sounds
 set visualbell
 
+" add powerline display
+let g:Powerline_symbols = 'fancy'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
