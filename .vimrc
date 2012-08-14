@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+﻿"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pathogen_disabled = ['javascript']
@@ -6,13 +6,13 @@ let g:pathogen_disabled = ['javascript']
 " pathogen initialization
 call pathogen#infect()
 
-" Mapping b�po
+" Mapping bépo
 " source ~/Apps/vimfiles/.vimrc.bepo
 
 " no vi compatibility
 set nocompatible
 
-" b�po -> qwerty ergonomie
+" bépo -> qwerty ergonomie
 source ~/Apps/vimfiles/.vimrc.bepo
 
 " filetype detection an syntax highlighting
@@ -125,7 +125,7 @@ set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set listchars=""                  " Reset the listchars
 set listchars+=tab:\|\            " a tab should display as ' ', trailing whitespace as '.'
-set listchars+=trail:�            " show trailing spaces as middle dots
+set listchars+=trail:·            " show trailing spaces as middle dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the scree
 
@@ -140,6 +140,12 @@ set textwidth=80
 
 "Automate tabularization of cucumber features
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+" map tab
+noremap è' :tabnew<CR>
+noremap èx :tabclose<CR>
+noremap èr :tabnext<CR>
+noremap èc :tabprevious<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,7 +183,7 @@ set cursorline
 " Nerdtree configuration
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <f5> :NERDTreeToggle<CR>
+noremap <f5> :NERDTreeToggle<CR>
 
 " TagList configuration
 if system("uname") == "Darwin\n"
@@ -187,7 +193,7 @@ else
 endif
 set tags=tag
 let Tlist_WinWidth = 50
-map <f6> :TlistToggle<cr>
+noremap <f6> :TlistToggle<cr>
 let Tlist_Process_File_Always = 1
 
 " Ctrlp configuration
@@ -203,7 +209,7 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list 
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nnoremap :seime :call Seime()
 function! Seime()
-  let search=input("Séquence� rechercher dans le répertoire eime ?")
+  let search=input("SÃ©quence  rechercher dans le rÃ©pertoire eime ?")
   execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
 endfunction
 

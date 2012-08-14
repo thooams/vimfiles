@@ -20,7 +20,6 @@ noremap a a
 noremap u s
 noremap i d
 noremap e f
-noremap \ \
 noremap , g
 noremap c h
 noremap t j
