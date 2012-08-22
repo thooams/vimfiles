@@ -201,6 +201,7 @@ let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
 let g:ctrlp_working_path_mode = 2              " set the working dir at  the nearest ancestor that contains .git
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so " ignore some files
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
+set wildignorecase
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
