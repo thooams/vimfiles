@@ -118,7 +118,4 @@ highlight NbSp ctermbg=lightgray guibg=lightred
 set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<
 set list
 
-" Utiliser les touches Backspace et espace pour descendre ou monter la page
-noremap <BS> <PageUp>
-noremap <Space> <PageDown>
 
