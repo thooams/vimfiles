@@ -161,6 +161,10 @@ set incsearch
 set showmatch
 set hlsearch
 
+" Search word under cursor in current dir
+:let Grep_Skip_Dirs = '.git tmp public/system doc .yardoc log'
+:let Grep_Skip_Files = '*.bak *~ tags Session.vim'
+map <C-F> <esc>:Grep<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -210,13 +214,6 @@ set wildignorecase
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Grep eime
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-nnoremap :seime :call Seime()
-function! Seime()
-  let search=input("SÃ©quence  rechercher dans le rÃ©pertoire eime ?")
-  execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
-endfunction
 
 " Cucumber align
 function! s:align()
