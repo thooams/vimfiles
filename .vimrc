@@ -164,7 +164,7 @@ set hlsearch
 " Search word under cursor in current dir
 :let Grep_Skip_Dirs = '.git tmp public/system doc .yardoc log'
 :let Grep_Skip_Files = '*.bak *~ tags Session.vim'
-map <C-F> <esc>:Grep<CR>
+nnoremap <C-f> :Rgrep<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
