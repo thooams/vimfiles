@@ -211,7 +211,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so/*,*/doc/* " ignore some files
 "let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|doc)$'
 let g:ctrlp_custom_ignore = '.git\|hg\|svn\|doc'
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " use git to list files (faster)
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " use git to list files (faster) except => doc
 set wildignorecase
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
