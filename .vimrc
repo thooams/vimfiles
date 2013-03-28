@@ -48,7 +48,7 @@ set undolevels=1000
 set visualbell
 
 " add powerline display
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 " Disable flash and beep
 set noeb vb t_vb=
