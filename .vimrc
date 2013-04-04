@@ -48,7 +48,7 @@ set undolevels=1000
 set visualbell
 
 " add powerline display
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 " Disable flash and beep
 set noeb vb t_vb=
@@ -161,6 +161,10 @@ set incsearch
 set showmatch
 set hlsearch
 
+" Search word under cursor in current dir
+:let Grep_Skip_Dirs = '.git tmp public/system doc .yardoc log'
+:let Grep_Skip_Files = '*.bak *~ tags Session.vim'
+nnoremap <C-f> :Rgrep<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -203,20 +207,16 @@ let Tlist_Process_File_Always = 1
 " Ctrlp configuration
 let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
 let g:ctrlp_working_path_mode = 2              " set the working dir at  the nearest ancestor that contains .git
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so " ignore some files
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so/*,*/doc/* " ignore some files
+"let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|doc)$'
+let g:ctrlp_custom_ignore = '.git\|hg\|svn\|doc'
+"let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " use git to list files (faster) except => doc
 set wildignorecase
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Grep eime
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-nnoremap :seime :call Seime()
-function! Seime()
-  let search=input("SÃ©quence  rechercher dans le rÃ©pertoire eime ?")
-  execute(":vimgrep  /".search."/gj  ~/Apps/codde-eime/**|copen")
-endfunction
 
 " Cucumber align
 function! s:align()
@@ -229,6 +229,16 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
+
 
 " Tabularize
 let mapleader=','
