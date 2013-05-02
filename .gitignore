@@ -1,16 +1,16 @@
 # OS generated files #
 #####################
- .DS_Store
- .DS_Store?
- ._*
- .Spotlight-V100
- .Trashes
- Icon?
- ehthumbs.db
- Thumbs.db
- *.DS_Store
- bundle/.DS_Store
- undodir
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.DS_Store
+bundle/.DS_Store
+undodir
 .netrwhist
 tags
 bundle/vimspell
