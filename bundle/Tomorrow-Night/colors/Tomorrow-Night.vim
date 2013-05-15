@@ -5,7 +5,8 @@
 
 " Default GUI Colours
 let s:foreground = "c5c8c6"
-let s:background = "1d1f21"
+let s:background = "NONE"
+" let s:background = "1d1f21"
 let s:selection = "373b41"
 let s:line = "282a2e"
 let s:comment = "969896"
@@ -20,7 +21,8 @@ let s:window = "4d5057"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = "303030"
+	" let s:background = "303030"
+	let s:background =  "none"
 	let s:window = "5e5e5e"
 	let s:line = "3a3a3a"
 	let s:selection = "585858"
@@ -230,11 +232,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Sets the highlighting for the given group
 	fun <SID>X(group, fg, bg, attr)
 		if a:fg != ""
-			exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
+			 exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
 		endif
 		if a:bg != ""
-			" exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . <SID>rgb(a:bg)
-      exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=NONE"
+       if a:bg == "none"
+			   exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=NONE"
+			 else
+         exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . <SID>rgb(a:bg)
+       endif
 		endif
 		if a:attr != ""
 			exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
