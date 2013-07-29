@@ -203,6 +203,9 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 noremap <f5> :NERDTreeToggle<CR>
 
+" have tree in all tabs
+let g:nerdtree_tabs_open_on_console_startup=1
+
 " TagList configuration
 if system("uname") == "Darwin\n"
   let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
