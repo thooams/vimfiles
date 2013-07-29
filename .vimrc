@@ -184,6 +184,21 @@ endif
 " highlight current line
 set cursorline
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Remove arrow to learn vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Normal mode
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+" Insert mode
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>"
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
