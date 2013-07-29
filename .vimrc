@@ -145,12 +145,6 @@ set textwidth=80
 "Automate tabularization of cucumber features
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
-" map tab
-noremap è' :tabnew<CR>
-noremap èx :tabclose<CR>
-noremap èr :tabnext<CR>
-noremap èc :tabprevious<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
@@ -198,6 +192,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>"
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -264,6 +259,7 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
+" Display line number in relative to cursor
 function! NumberToggle()
   if(&relativenumber == 1)
     set number

@@ -118,4 +118,17 @@ highlight NbSp ctermbg=lightgray guibg=lightred
 set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<
 set list
 
+" NERDTree for bépo
+let NERDTreeMapOpenInTab='h'
+let NERDTreeMapOpenInTabSilent='H'
+let NERDTreeMapOpenVSplit='<C-v>'
+let NERDTreeMapJumpFirstChild='S'
+let NERDTreeMapJumpLastChild='T'
+let NERDTreeMapJumpNextSibling='<C-T>'
+let NERDTreeMapJumpPrevSibling='<C-S>'
+let NERDTreeMapJumpParent='j'
+let NERDTreeMapRefresh='o'
+let NERDTreeMapRefresh='O'
+let NERDTreeMapOpenInTab='è'
+let NERDTreeMapOpenInTabSilent='È'
 
