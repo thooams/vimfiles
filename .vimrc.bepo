@@ -131,4 +131,5 @@ let NERDTreeMapRefresh='o'
 let NERDTreeMapRefresh='O'
 let NERDTreeMapOpenInTab='è'
 let NERDTreeMapOpenInTabSilent='È'
+let NERDTreeMapActivateNode='l'
 
