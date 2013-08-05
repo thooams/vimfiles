@@ -121,3 +121,9 @@
 	path = bundle/vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
 
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/vim-sensible"]
+	path = bundle/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git

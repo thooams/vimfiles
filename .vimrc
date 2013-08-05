@@ -1,10 +1,12 @@
 ﻿"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pathogen_disabled = ['javascript']
+"let g:pathogen_disabled = ['javascript']
 
 " pathogen initialization
-call pathogen#infect()
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
 " Mapping bépo
 " source ~/Apps/vimfiles/.vimrc.bepo
@@ -14,10 +16,6 @@ set nocompatible
 
 " bépo -> qwerty ergonomie
 source ~/Apps/vimfiles/.vimrc.bepo
-
-" filetype detection an syntax highlighting
-filetype plugin indent on
-syntax on
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -164,7 +162,7 @@ nnoremap <C-f> :Rgrep<CR>
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tomorrow theme
-color Tomorrow-Night
+color "Tomorrow-Night"
 set t_Co=256
 
 " Set extra options when running in GUI mode
