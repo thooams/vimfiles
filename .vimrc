@@ -162,7 +162,7 @@ nnoremap <C-f> :Rgrep<CR>
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tomorrow theme
-color "Tomorrow-Night"
+color Tomorrow-Night
 set t_Co=256
 
 " Set extra options when running in GUI mode
