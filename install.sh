@@ -16,5 +16,8 @@ git submodule init
 git submodule update
 
 # Add symlink pathogen from bundle to load all vim plugin
-mkdir ~/Apps/vimfiles/autoload 
+cd ~/Apps/vimfiles
+if [ ! -d "autoload" ]; then
+  mkdir autoload
+fi
 ln -s ~/Apps/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim ~/Apps/vimfiles/autoload/pathogen.vim
