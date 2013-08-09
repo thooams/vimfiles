@@ -1,9 +1,9 @@
 ""
 "" mapping du clavier bépo->qwerty en mode normal
 ""
-
+ 
 " configuration des lettres
-
+ 
 noremap b q
 noremap é w
 noremap p e
@@ -20,7 +20,8 @@ noremap a a
 noremap u s
 noremap i d
 noremap e f
-noremap , g
+noremap \ \
+noremap g ,
 noremap c h
 noremap t j
 noremap s k
@@ -77,13 +78,14 @@ noremap Q M
 noremap G <
 noremap H >
 noremap F ?
-
+ 
 " configuration du copié sur le ç car y est sur la touche composé ^
-
-noremap ç \
-
+ 
+noremap ç y
+noremap ^ y
+ 
 " configuration des nombres
-
+ 
 noremap $ `
 noremap " 1
 noremap « 2
@@ -133,3 +135,5 @@ let NERDTreeMapOpenInTab='è'
 let NERDTreeMapOpenInTabSilent='È'
 let NERDTreeMapActivateNode='l'
 
+" map leader
+let mapleader="]"

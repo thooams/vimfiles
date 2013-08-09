@@ -8,9 +8,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" Mapping bépo
-" source ~/Apps/vimfiles/.vimrc.bepo
-
 " no vi compatibility
 set nocompatible
 
@@ -31,6 +28,7 @@ set noswapfile
 
 " Accelerate autocompletion on large projects
 set foldmethod=manual
+
 " don't wrap lines
 set nowrap
 
@@ -44,9 +42,6 @@ set undolevels=1000
 
 " desactivate sounds
 set visualbell
-
-" add powerline display
-" let g:Powerline_symbols = 'fancy'
 
 " Disable flash and beep
 set noeb vb t_vb=
@@ -95,14 +90,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set backspace=2
 set backspace=indent,eol,start
-
-" Switch from last two buffers
-" nnoremap <leader><leader> <c-^>
-" Activate ruby code folding
-set foldmethod=syntax
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
 
 " Faster scrolling
 set showcmd
@@ -189,7 +176,7 @@ nnoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
-inoremap <right> <nop>"
+inoremap <right> <nop>
 
 
 
