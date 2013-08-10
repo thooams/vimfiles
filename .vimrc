@@ -62,7 +62,9 @@ set laststatus=2
 autocmd BufWritePre * :%s/\s\+$//e
 
 " allow backgrounding buffer without saving them
-set hidden
+if ! has('gui_running')
+  set hidden
+endif
 
 " Better interface when using c(hange) macros
 set cpoptions=B$
@@ -130,6 +132,13 @@ set textwidth=80
 "Automate tabularization of cucumber features
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
+if has("gui_running")
+  set guioptions-=T
+  set guioptions+=e
+  set t_Co=256
+  set guitablabel=%M\ %t
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
@@ -152,13 +161,6 @@ nnoremap <C-f> :Rgrep<CR>
 color Tomorrow-Night
 set t_Co=256
 
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions+=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
 
 " highlight current line
 set cursorline
@@ -210,7 +212,10 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so/*,*/doc/* " ignore some files
 let g:ctrlp_custom_ignore = '.git\|hg\|svn\|doc'
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " use git to list files (faster) except => doc
-set wildignorecase
+
+if exists("&wildignorecase")
+  set wildignorecase
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
