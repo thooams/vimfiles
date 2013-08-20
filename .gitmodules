@@ -1,8 +1,5 @@
 [submodule "bundle"]
  path = bundle
-[submodule "bundle/molokai"]
- path = bundle/molokai
- url = https://github.com/mrtazz/molokai.vim.git
 [submodule "bundle/fugitive"]
  path = bundle/fugitive
  url = https://github.com/tpope/vim-fugitive.git
