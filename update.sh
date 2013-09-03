@@ -4,5 +4,5 @@ git submodule update
 git submodule foreach --recursive git submodule update --init
 git submodule foreach "git pull origin master"
 git st
-git up
+git ups
 git push origin master
