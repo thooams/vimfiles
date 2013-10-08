@@ -45,7 +45,7 @@ set visualbell
 
 " Disable flash and beep
 set noeb vb t_vb=
-
+au GUIEnter * set vb t_vb=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,6 +160,9 @@ nnoremap <C-f> :Rgrep<CR>
 " tomorrow theme
 color Tomorrow-Night
 set t_Co=256
+
+" Font gui
+set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
 
 " highlight current line
