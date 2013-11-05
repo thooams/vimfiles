@@ -161,7 +161,7 @@ let NERDTreeMapOpenInTabSilent='È'
 let NERDTreeMapActivateNode='l'
 
 " map leader
-let mapleader="]"
+let mapleader="w"
 
 " map ctrl
 noremap <C-k> <C-b>
@@ -171,12 +171,15 @@ noremap <C-v> <C-u>
 noremap <C-o> <C-r>
 noremap <C-à-u> <C-w-s>
 
-
-
 " map tab
 noremap è' :tabnew<CR>
 noremap èr :tabnext<CR>
 noremap èc :tabprev<CR>
 noremap èt :tabfirst<CR>
 noremap ès :tablast<CR>
+
+" map tampon
+noremap êr :bn<cr>
+noremap êc :bp<cr>
+noremap êi :bd<cr>
 
