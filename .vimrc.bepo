@@ -5,34 +5,47 @@
 " configuration des lettres
 
 noremap b q
+noremap bà aw
+noremap bu as
+noremap bj ap
+noremap bk ab
+noremap bK aB
 noremap é w
 noremap p e
 noremap o r
 noremap è t
 noremap ^ y
+noremap ^n ^m
 noremap v u
 noremap d i
 noremap l o
 noremap j p
 noremap z [
+noremap zj [p
 noremap w ]
+noremap wj ]p
 noremap a a
 noremap u s
 noremap i d
+noremap ià dw
+noremap idà diw
 noremap e f
 noremap \ \
-noremap g ,
 noremap c h
 noremap t j
 noremap s k
 noremap r l
 noremap n ;
+noremap nx mc
 noremap m '
 noremap ê <
 noremap à z
 noremap àà zz
 noremap y x
 noremap x c
+noremap xx cc
+noremap xà cw
+noremap xdà ciw
 noremap . v
 noremap k b
 noremap ' n
@@ -40,6 +53,18 @@ noremap q m
 noremap g ,
 noremap , g
 noremap ,, gg
+noremap ,i gd
+noremap ,D gD
+noremap ,p ge
+noremap ,T gJ
+noremap ,n gm
+noremap ,j gp
+noremap ,J gP
+noremap ,vn gum
+noremap ,Vn gVm
+noremap ,D gD
+noremap ,ox grc
+noremap ,O gR
 noremap h .
 noremap f /
 noremap B Q
@@ -137,3 +162,21 @@ let NERDTreeMapActivateNode='l'
 
 " map leader
 let mapleader="]"
+
+" map ctrl
+noremap <C-k> <C-b>
+noremap <C-e> <C-f>
+noremap <C-i> <C-d>
+noremap <C-v> <C-u>
+noremap <C-o> <C-r>
+noremap <C-à-u> <C-w-s>
+
+
+
+" map tab
+noremap è' :tabnew<CR>
+noremap èr :tabnext<CR>
+noremap èc :tabprev<CR>
+noremap èt :tabfirst<CR>
+noremap ès :tablast<CR>
+
