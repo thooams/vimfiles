@@ -165,11 +165,10 @@ let mapleader="w"
 
 " map ctrl
 noremap <C-k> <C-b>
+noremap <C-dot> <C-v>
 noremap <C-e> <C-f>
 noremap <C-i> <C-d>
-noremap <C-v> <C-u>
 noremap <C-o> <C-r>
-noremap <C-à-u> <C-w-s>
 
 " map tab
 noremap è' :tabnew<CR>
