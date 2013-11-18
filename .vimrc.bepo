@@ -104,10 +104,6 @@ noremap G <
 noremap H >
 noremap F ?
 
-" configuration du copié sur le ç car y est sur la touche composé ^
-
-noremap ç y
-noremap ^ y
 
 " configuration des nombres
 
@@ -161,7 +157,7 @@ let NERDTreeMapOpenInTabSilent='È'
 let NERDTreeMapActivateNode='l'
 
 " map leader
-let mapleader="w"
+let mapleader="ç"
 
 " map ctrl
 noremap <C-k> <C-b>
