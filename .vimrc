@@ -162,7 +162,11 @@ color Tomorrow-Night
 set t_Co=256
 
 " Font gui
-set guifont=Liberation\ Mono\ for\ Powerline\ 10
+if system("uname") == "Darwin\n"
+  set guifont=Menlo\ for\ Powerline:h12
+else
+  set guifont=Liberation\ Mono\ for\ Powerline\ 10
+endif
 
 
 " highlight current line
