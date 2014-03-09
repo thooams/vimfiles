@@ -163,7 +163,7 @@ set t_Co=256
 
 " Font gui
 if system("uname") == "Darwin\n"
-  set guifont=Menlo\ for\ Powerline:h12
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 else
   set guifont=Liberation\ Mono\ for\ Powerline\ 10
 endif
