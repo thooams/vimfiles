@@ -269,3 +269,7 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
+" Reload .vimrc
+if has("autocmd")
+  autocmd bufwritepost ~/.vimrc source $MYVIMRC
+endif
