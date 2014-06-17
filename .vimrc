@@ -14,6 +14,9 @@ set nocompatible
 " bépo -> qwerty ergonomie
 source ~/Apps/vimfiles/.vimrc.bepo
 
+" add powerline
+set rtp+=~/Apps/powerline/powerline/bindings/vim
+
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
