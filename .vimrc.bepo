@@ -44,6 +44,7 @@ noremap àà zz
 noremap y x
 noremap x c
 noremap xx cc
+noremap xu cs
 noremap xà cw
 noremap xdà ciw
 noremap . v
