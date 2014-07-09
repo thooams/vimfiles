@@ -64,11 +64,6 @@ set laststatus=2
 " Remove trailing spaces
 autocmd BufWritePre * :%s/\s\+$//e
 
-" allow backgrounding buffer without saving them
-if ! has('gui_running')
-  set hidden
-endif
-
 " Better interface when using c(hange) macros
 set cpoptions=B$
 
@@ -163,6 +158,11 @@ nnoremap <C-f> :Rgrep<CR>
 " tomorrow theme
 color Tomorrow-Night
 set t_Co=256
+
+" syntax enable
+" set background=dark
+" colorscheme solarized
+" let g:solarized_termcolors=256
 
 " Font gui
 if system("uname") == "Darwin\n"

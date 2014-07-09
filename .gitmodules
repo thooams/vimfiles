@@ -139,3 +139,9 @@
 [submodule "bundle/vim-js2coffee"]
 	path = bundle/vim-js2coffee
 	url = https://github.com/JarrodCTaylor/vim-js2coffee
+[submodule "bundle/bundle/vim-colors-solarized"]
+	path = bundle/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
