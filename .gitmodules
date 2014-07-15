@@ -145,3 +145,6 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/vim-multimarkdown"]
+	path = bundle/vim-multimarkdown
+	url = https://github.com/jngeist/vim-multimarkdown.git
