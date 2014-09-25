@@ -12,7 +12,7 @@ filetype plugin indent on
 set nocompatible
 
 " bépo -> qwerty ergonomie
-source ~/Apps/vimfiles/.vimrc.bepo
+" source ~/Apps/vimfiles/.vimrc.bepo
 
 " add powerline
 set rtp+=~/Apps/powerline/powerline/bindings/vim
@@ -179,16 +179,16 @@ set cursorline
 " => Remove arrow to learn vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Normal mode
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-
-" Insert mode
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+"
+" " Insert mode
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 
 
