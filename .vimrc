@@ -232,6 +232,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Cucumber align
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -254,12 +255,14 @@ endif
 
 
 " Tabularize
+let mapleader=","
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
+
 
 " Display line number in relative to cursor
 function! NumberToggle()
