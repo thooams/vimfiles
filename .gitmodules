@@ -148,3 +148,6 @@
 [submodule "bundle/vim-multimarkdown"]
 	path = bundle/vim-multimarkdown
 	url = https://github.com/jngeist/vim-multimarkdown.git
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = git://github.com/tpope/vim-eunuch.git
