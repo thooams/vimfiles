@@ -101,6 +101,9 @@ set mousehide
 " Allow the cursor to go in to "invalid" places
 set virtualedit=all
 
+" Add spell orthographe
+:map <F9> :setlocal spell! spelllang=fr<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
