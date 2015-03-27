@@ -15,7 +15,10 @@ set nocompatible
 " source ~/Apps/vimfiles/.vimrc.bepo
 
 " add powerline
-set rtp+=~/Apps/powerline/powerline/bindings/vim
+" set rtp+=~/Apps/powerline/powerline/bindings/vim
+
+" add airline
+let g:airline_powerline_fonts=1
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -171,7 +174,7 @@ set t_Co=256
 if system("uname") == "Darwin\n"
   set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 else
-  set guifont=Liberation\ Mono\ for\ Powerline\ 10
+ " set guifont=Liberation\ Mono\ for\ Powerline\ 10
 endif
 
 
