@@ -45,6 +45,7 @@ set number
 set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000
+set undoreload=10000
 
 " desactivate sounds
 set visualbell
@@ -112,6 +113,10 @@ nnoremap <D-left> :vertical resize -5<cr>
 nnoremap <D-down> :resize +5<cr>
 nnoremap <D-up> :resize -5<cr>
 nnoremap <D-right> :vertical resize +5<cr>
+
+" Navigate into buffer
+noremap « :bprev<CR>
+noremap » :bnext<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -290,4 +295,18 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " Reload .vimrc
 if has("autocmd")
   autocmd bufwritepost ~/.vimrc source $MYVIMRC
+endif
+
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+  let myUndoDir = expand(vimDir . '/undodir')
+  " Create dirs
+  call system('mkdir ' . vimDir)
+  call system('mkdir ' . myUndoDir)
+  let &undodir = myUndoDir
+  set undofile
 endif
