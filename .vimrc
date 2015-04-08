@@ -11,6 +11,9 @@ filetype plugin indent on
 " no vi compatibility
 set nocompatible
 
+" diplaying file name in title window
+set title
+
 " bépo -> qwerty ergonomie
 " source ~/Apps/vimfiles/.vimrc.bepo
 
