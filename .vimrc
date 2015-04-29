@@ -45,10 +45,10 @@ set nowrap
 set number
 
 " Allow undoing after quitting
-set undodir=~/.vim/undodir
-set undofile
-set undolevels=1000
-set undoreload=10000
+" set undodir=~/.vim/undodir
+" set undofile
+" set undolevels=1000
+" set undoreload=10000
 
 " desactivate sounds
 set visualbell
