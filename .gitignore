@@ -13,5 +13,4 @@ bundle/.DS_Store
 undodir
 .netrwhist
 tags
-autoload/pathogen.vim
 bundle/vimspell
