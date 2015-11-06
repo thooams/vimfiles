@@ -14,6 +14,7 @@ set nocompatible
 " diplaying file name in title window
 set title
 
+
 " bépo -> qwerty ergonomie
 " source ~/Apps/vimfiles/.vimrc.bepo
 
@@ -214,10 +215,10 @@ set cursorline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Map alt touch for HJKL direction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap © h
-nnoremap þ j
-nnoremap ß k
-nnoremap ® l
+noremap © h
+noremap þ j
+noremap ß k
+noremap ® l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
