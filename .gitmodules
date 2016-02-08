@@ -144,3 +144,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/vim-test"]
+	path = bundle/vim-test
+	url = git@github.com:janko-m/vim-test.git
