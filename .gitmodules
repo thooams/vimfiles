@@ -42,9 +42,6 @@
 [submodule "bundle/ruby-refactoring"]
  path = bundle/ruby-refactoring
  url = https://github.com/ecomba/vim-ruby-refactoring.git
-[submodule "bundle/cucumber"]
- path = bundle/cucumber
- url = https://github.com/tpope/vim-cucumber.git
 [submodule "bundle/surround"]
  path = bundle/surround
  url = https://github.com/tpope/vim-surround.git
@@ -72,24 +69,15 @@
 [submodule "bundle/threesome"]
  path = bundle/threesome
  url = https://github.com/sjl/threesome.vim.git
-[submodule "bundle/jade"]
- path = bundle/jade
- url = https://github.com/digitaltoad/vim-jade.git
 [submodule "bundle/nerdtree"]
   path = bundle/nerdtree
   url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/CuteErrorMaker"]
   path = bundle/CuteErrorMaker
   url = https://github.com/Twinside/vim-cuteErrorMarker.git
-[submodule "bundle/twilight"]
-  path = bundle/twilight
-  url = https://github.com/scottymoon/vim-twilight.git
 [submodule "bundle/nerdcommenter"]
   path = bundle/nerdcommenter
   url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/vim-cucumber"]
-	path = bundle/vim-cucumber
-	url = https://github.com/tpope/vim-cucumber.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -129,21 +117,9 @@
 [submodule "bundle/tComment"]
 	path = bundle/tComment
 	url = https://github.com/vim-scripts/tComment
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
-[submodule "bundle/vim-jade"]
-	path = bundle/vim-jade
-	url = https://github.com/digitaltoad/vim-jade.git
 [submodule "bundle/vim-js2coffee"]
 	path = bundle/vim-js2coffee
 	url = https://github.com/JarrodCTaylor/vim-js2coffee
-[submodule "bundle/bundle/vim-colors-solarized"]
-	path = bundle/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized
 [submodule "bundle/vim-multimarkdown"]
 	path = bundle/vim-multimarkdown
 	url = https://github.com/jngeist/vim-multimarkdown.git
