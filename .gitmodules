@@ -147,3 +147,6 @@
 [submodule "bundle/vim-test"]
 	path = bundle/vim-test
 	url = git@github.com:janko-m/vim-test.git
+[submodule "bundle/nerdtree-git-plugin"]
+	path = bundle/nerdtree-git-plugin
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
