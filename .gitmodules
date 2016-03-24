@@ -150,3 +150,6 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+[submodule "bundle/vim-numbertoggle"]
+	path = bundle/vim-numbertoggle
+	url = git@github.com:jeffkreeftmeijer/vim-numbertoggle.git

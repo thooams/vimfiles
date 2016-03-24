@@ -43,7 +43,7 @@ set foldmethod=manual
 set nowrap
 
 " numbering
-set number
+set relativenumber
 
 " Allow undoing after quitting
 " set undodir=~/.vim/undodir
@@ -285,18 +285,6 @@ if exists(":Tabularize")
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
-
-
-" Display line number in relative to cursor
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
 
 " Reload .vimrc
 if has("autocmd")
