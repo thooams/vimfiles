@@ -135,9 +135,6 @@
 [submodule "bundle/vim-bufferline"]
 	path = bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline
-[submodule "bundle/vim-signify"]
-	path = bundle/vim-signify
-	url = https://github.com/mhinz/vim-signify
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
@@ -153,3 +150,6 @@
 [submodule "bundle/vim-numbertoggle"]
 	path = bundle/vim-numbertoggle
 	url = git@github.com:jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
