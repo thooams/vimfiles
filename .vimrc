@@ -184,7 +184,7 @@ set t_Co=256
 if system("uname") == "Darwin\n"
   set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 else
- " set guifont=Liberation\ Mono\ for\ Powerline\ 10
+  set guifont=Roboto\ Mono\ for\ Powerline\ Regular\ 11
 endif
 
 
