@@ -132,7 +132,8 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 
 " invisibles
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:␣
+set list
 
 " Indentation
 set autoindent
