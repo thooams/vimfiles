@@ -133,7 +133,6 @@ set expandtab                     " use spaces, not tabs
 
 " invisibles
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:␣
-set list
 
 " Indentation
 set autoindent
