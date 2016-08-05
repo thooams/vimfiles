@@ -110,7 +110,7 @@ set mousehide
 set virtualedit=all
 
 " Add spell orthographe
-:map <F9> :setlocal spell! spelllang=fr<CR>
+map <F9> :setlocal spell! spelllang=fr<CR>
 
 " resize current buffer by +/- 5
 nnoremap <D-left> :vertical resize -5<cr>
@@ -122,6 +122,9 @@ nnoremap <D-right> :vertical resize +5<cr>
 noremap « :bprev<CR>
 noremap » :bnext<CR>
 
+
+" Remove altGR key binding to gvim
+set winaltkeys=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -210,10 +213,10 @@ set cursorline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Map alt touch for HJKL direction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap © h
-noremap þ j
-noremap ß k
-noremap ® l
+noremap ã h
+noremap ô j
+noremap ó k
+noremap ò l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
