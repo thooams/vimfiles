@@ -156,3 +156,6 @@
 [submodule "bundle/Dockerfile"]
 	path = bundle/Dockerfile
 	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "bundle/vim-crystal"]
+	path = bundle/vim-crystal
+	url = git@github.com:rhysd/vim-crystal.git
