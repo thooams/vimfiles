@@ -159,3 +159,6 @@
 [submodule "bundle/vim-crystal"]
 	path = bundle/vim-crystal
 	url = git@github.com:rhysd/vim-crystal.git
+[submodule "bundle/vim-slang"]
+	path = bundle/vim-slang
+	url = git://github.com/isaacsloan/vim-slang.git
