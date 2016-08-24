@@ -1,25 +1,79 @@
-﻿"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:pathogen_disabled = ['javascript']
+" -----------------------------------------------
+" Plugins Section -------------------------------
+" -----------------------------------------------
 
-" pathogen initialization
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+call plug#begin('~/.nvim/plugged')
+
+" Git Helpers
+Plug 'git@github.com:tpope/vim-fugitive.git'
+Plug 'git@github.com:airblade/vim-gitgutter.git'
+Plug 'git@github.com:Xuyuanp/nerdtree-git-plugin.git'
+
+" Syntax
+Plug 'git@github.com:tpope/vim-rails.git'
+Plug 'git@github.com:tpope/vim-haml.git'
+Plug 'git@github.com:vim-ruby/vim-ruby.git'
+Plug 'git@github.com:kchmck/vim-coffee-script.git'
+Plug 'git@github.com:rhysd/vim-crystal.git'
+Plug 'git@github.com:isaacsloan/vim-slang.git'
+Plug 'git@github.com:ekalinin/Dockerfile.vim.git'
+Plug 'git@github.com:pangloss/vim-javascript.git'
+Plug 'git@github.com:tpope/vim-markdown.git'
+Plug 'git@github.com:jngeist/vim-multimarkdown.git'
+
+
+" Color sheme
+Plug 'git@github.com:chriskempson/vim-tomorrow-theme.git'
+
+" Utils
+Plug 'git@github.com:kien/ctrlp.vim.git'
+Plug 'git@github.com:tpope/vim-endwise.git'
+Plug 'git@github.com:mileszs/ack.vim.git'
+Plug 'git@github.com:msanders/snipmate.vim.git'
+Plug 'git@github.com:ervandew/supertab.git'
+Plug 'git@github.com:duff/vim-scratch.git'
+Plug 'git@github.com:edsono/vim-matchit.git'
+Plug 'git@github.com:ecomba/vim-ruby-refactoring.git'
+Plug 'git@github.com:tpope/vim-surround.git'
+Plug 'git@github.com:godlygeek/tabular.git'
+Plug 'git@github.com:sickill/vim-pasta.git'
+Plug 'git@github.com:vim-scripts/taglist.vim.git'
+Plug 'git@github.com:rorymckinley/vim-symbols-strings.git'
+Plug 'git@github.com:nono/vim-handlebars.git'
+Plug 'git@github.com:sjl/threesome.vim.git'
+Plug 'git@github.com:scrooloose/nerdtree.git'
+Plug 'git@github.com:Twinside/vim-cuteErrorMarker.git'
+Plug 'git@github.com:scrooloose/nerdcommenter.git'
+Plug 'git@github.com:scrooloose/syntastic.git'
+Plug 'git@github.com:Raimondi/delimitMate.git'
+Plug 'git@github.com:majutsushi/tagbar.git'
+Plug 'git@github.com:danchoi/ri.vim.git'
+Plug 'git@github.com:noprompt/vim-yardoc.git'
+Plug 'git@github.com:vim-scripts/grep.vim.git'
+Plug 'git@github.com:thoughtbot/vim-rspec.git'
+Plug 'git@github.com:jistr/vim-nerdtree-tabs.git'
+Plug 'git@github.com:tpope/vim-sensible.git'
+Plug 'git@github.com:nathanaelkane/vim-indent-guides.git'
+Plug 'git@github.com:vim-scripts/tComment.git'
+Plug 'git@github.com:tpope/vim-eunuch.git'
+Plug 'git@github.com:nelstrom/vim-qargs.git'
+Plug 'git@github.com:bling/vim-airline.git'
+Plug 'git@github.com:bling/vim-bufferline.git'
+Plug 'git@github.com:terryma/vim-multiple-cursors.git'
+Plug 'git@github.com:tpope/vim-repeat.git'
+Plug 'git@github.com:janko-m/vim-test.git'
+Plug 'git@github.com:jeffkreeftmeijer/vim-numbertoggle.git'
+call plug#end()
+
+" -----------------------------------------------
+" General Section -------------------------------
+" -----------------------------------------------
 
 " no vi compatibility
 set nocompatible
 
 " diplaying file name in title window
 set title
-
-
-" bépo -> qwerty ergonomie
-" source ~/Apps/vimfiles/.vimrc.bepo
-
-" add powerline
-" set rtp+=~/Apps/powerline/powerline/bindings/vim
 
 " add airline
 let g:airline_powerline_fonts=1
@@ -80,7 +134,7 @@ set pastetoggle=<F2>
 
 " Enable mouse scrolling
 set mouse=a
-set ttymouse=xterm
+"set ttymouse=xterm
 
 " Make searches case-sensitive only if they contain upper-case characters
 set ignorecase
@@ -96,9 +150,6 @@ set scrolloff=3
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-set backspace=2
-set backspace=indent,eol,start
-
 " Faster scrolling
 set showcmd
 set lazyredraw
@@ -106,7 +157,7 @@ set lazyredraw
 " Hide mouse when typing
 set mousehide
 
-" Allow the cursor to go in to "invalid" places
+" Allow the cursor to go in to 'invalid' places
 set virtualedit=all
 
 " Add spell orthographe
@@ -121,7 +172,6 @@ nnoremap <D-right> :vertical resize +5<cr>
 " Navigate into buffer
 noremap « :bprev<CR>
 noremap » :bnext<CR>
-
 
 " Remove altGR key binding to gvim
 set winaltkeys=no
@@ -211,7 +261,7 @@ set cursorline
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Map alt touch for HJKL direction
+" => Map alt touch for HJKL direction for bépo compatibility
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap ã h
 noremap ô j
@@ -257,19 +307,6 @@ endif
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Cucumber align
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
-function! s:align()
-  let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
-endfunction
-
 if ! has('gui_running')
   set ttimeoutlen=10
   augroup FastEscape
@@ -278,7 +315,6 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
-
 
 " Tabularize
 let mapleader=","
@@ -291,11 +327,11 @@ endif
 
 " Reload .vimrc
 if has("autocmd")
-  autocmd bufwritepost ~/.vimrc source $MYVIMRC
+  autocmd bufwritepost ~/.nvimrc source $MYVIMRC
 endif
 
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
+let vimDir = '$HOME/.nvim'
 let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file

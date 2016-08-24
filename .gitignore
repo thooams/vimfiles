@@ -9,8 +9,8 @@ Icon?
 ehthumbs.db
 Thumbs.db
 *.DS_Store
-bundle/.DS_Store
+plugged/.DS_Store
 undodir
 .netrwhist
 tags
-bundle/vimspell
+plugged/*
