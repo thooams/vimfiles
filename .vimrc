@@ -2,7 +2,7 @@
 " Plugins Section -------------------------------
 " -----------------------------------------------
 
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Git Helpers
 Plug 'git@github.com:tpope/vim-fugitive.git'
