@@ -94,7 +94,7 @@ set noswapfile
 set foldmethod=manual
 
 " don't wrap lines
-set nowrap
+" set nowrap
 
 " numbering
 set relativenumber
@@ -161,7 +161,7 @@ set mousehide
 set virtualedit=all
 
 " Add spell orthographe
-map <F9> :setlocal spell! spelllang=fr<CR>
+map <F9> :setlocal spell! spelllang=en<CR>
 
 " resize current buffer by +/- 5
 nnoremap <D-left> :vertical resize -5<cr>
@@ -327,11 +327,11 @@ endif
 
 " Reload .vimrc
 if has("autocmd")
-  autocmd bufwritepost ~/.nvimrc source $MYVIMRC
+  autocmd bufwritepost ~/.vimrc source $MYVIMRC
 endif
 
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.nvim'
+let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
