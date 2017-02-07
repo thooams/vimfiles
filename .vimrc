@@ -20,6 +20,7 @@ Plug 'git@github.com:ekalinin/Dockerfile.vim.git'
 Plug 'git@github.com:pangloss/vim-javascript.git'
 Plug 'git@github.com:tpope/vim-markdown.git'
 Plug 'git@github.com:jngeist/vim-multimarkdown.git'
+Plug 'git@github.com:rhysd/vim-crystal.git'
 
 
 " Color sheme
@@ -32,7 +33,7 @@ Plug 'git@github.com:mileszs/ack.vim.git'
 Plug 'git@github.com:msanders/snipmate.vim.git'
 Plug 'git@github.com:ervandew/supertab.git'
 Plug 'git@github.com:duff/vim-scratch.git'
-Plug 'git@github.com:edsono/vim-matchit.git'
+Plug 'git@github.com:tmhedberg/matchit.git'
 Plug 'git@github.com:ecomba/vim-ruby-refactoring.git'
 Plug 'git@github.com:tpope/vim-surround.git'
 Plug 'git@github.com:godlygeek/tabular.git'
@@ -58,11 +59,16 @@ Plug 'git@github.com:vim-scripts/tComment.git'
 Plug 'git@github.com:tpope/vim-eunuch.git'
 Plug 'git@github.com:nelstrom/vim-qargs.git'
 Plug 'git@github.com:bling/vim-airline.git'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'git@github.com:bling/vim-bufferline.git'
 Plug 'git@github.com:terryma/vim-multiple-cursors.git'
 Plug 'git@github.com:tpope/vim-repeat.git'
 Plug 'git@github.com:janko-m/vim-test.git'
 Plug 'git@github.com:jeffkreeftmeijer/vim-numbertoggle.git'
+" Disables the arrow keys, the hjkl keys, the page up/down key
+Plug 'git://github.com/wikitopian/hardmode.git'
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
 
 " -----------------------------------------------
@@ -77,6 +83,7 @@ set title
 
 " add airline
 let g:airline_powerline_fonts=1
+let g:airline_theme='base16_default'
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -112,6 +119,13 @@ set visualbell
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NeoVIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('nvim')
+  set inccommand=split
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -183,6 +197,7 @@ set winaltkeys=no
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
+set smarttab
 
 " invisibles
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:␣
@@ -289,6 +304,7 @@ set tags=tag
 let Tlist_WinWidth = 50
 noremap <f6> :TlistToggle<cr>
 let Tlist_Process_File_Always = 1
+let Tlist_Use_Right_Window = 1
 
 " Ctrlp configuration
 let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
