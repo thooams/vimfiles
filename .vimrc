@@ -21,13 +21,15 @@ Plug 'git@github.com:pangloss/vim-javascript.git'
 Plug 'git@github.com:tpope/vim-markdown.git'
 Plug 'git@github.com:jngeist/vim-multimarkdown.git'
 Plug 'git@github.com:rhysd/vim-crystal.git'
+Plug 'git@github.com:ryanoasis/vim-devicons'
+Plug 'https://github.com/posva/vim-vue.git'
 
 
 " Color sheme
 Plug 'git@github.com:chriskempson/vim-tomorrow-theme.git'
 
 " Utils
-Plug 'git@github.com:kien/ctrlp.vim.git'
+Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
 Plug 'git@github.com:tpope/vim-endwise.git'
 Plug 'git@github.com:mileszs/ack.vim.git'
 Plug 'git@github.com:msanders/snipmate.vim.git'
@@ -68,6 +70,7 @@ Plug 'git@github.com:jeffkreeftmeijer/vim-numbertoggle.git'
 " Disables the arrow keys, the hjkl keys, the page up/down key
 Plug 'git://github.com/wikitopian/hardmode.git'
 Plug 'edkolev/tmuxline.vim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -190,6 +193,11 @@ noremap » :bnext<CR>
 " Remove altGR key binding to gvim
 set winaltkeys=no
 
+
+" Icons
+let g:WebDevIconsNerdTreeGitPluginForceVAlign=0
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -220,6 +228,10 @@ if has("gui_running")
   set t_Co=256
   set guitablabel=%M\ %t
 endif
+
+" Wrap/break line
+set colorcolumn=+1
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -252,7 +264,7 @@ set t_Co=256
 if system("uname") == "Darwin\n"
   set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 else
-  set guifont=Roboto\ Mono\ for\ Powerline\ Regular\ 11
+  set guifont=RobotoMono\ Nerd\ Font\ Regular\ 11
 endif
 
 
