@@ -14,3 +14,4 @@ undodir
 .netrwhist
 tags
 plugged/*
+autoload/plug.vim.old
