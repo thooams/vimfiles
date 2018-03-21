@@ -5,72 +5,64 @@
 call plug#begin('~/.vim/plugged')
 
 " Git Helpers
+" Use git in vim, :Gedit, :Gsplit, :Gstatus
 Plug 'git@github.com:tpope/vim-fugitive.git'
+" Show modified lines
 Plug 'git@github.com:airblade/vim-gitgutter.git'
+" Nerdtree with git
 Plug 'git@github.com:Xuyuanp/nerdtree-git-plugin.git'
 
-" Syntax
-Plug 'git@github.com:tpope/vim-rails.git'
-Plug 'git@github.com:tpope/vim-haml.git'
-Plug 'git@github.com:vim-ruby/vim-ruby.git'
-Plug 'git@github.com:kchmck/vim-coffee-script.git'
-Plug 'git@github.com:rhysd/vim-crystal.git'
-Plug 'git@github.com:isaacsloan/vim-slang.git'
-Plug 'git@github.com:ekalinin/Dockerfile.vim.git'
-Plug 'git@github.com:pangloss/vim-javascript.git'
-Plug 'git@github.com:tpope/vim-markdown.git'
-Plug 'git@github.com:jngeist/vim-multimarkdown.git'
-Plug 'git@github.com:rhysd/vim-crystal.git'
 Plug 'git@github.com:ryanoasis/vim-devicons'
-Plug 'https://github.com/posva/vim-vue.git'
+Plug 'sheerun/vim-polyglot'
 
 
 " Color sheme
-Plug 'git@github.com:chriskempson/vim-tomorrow-theme.git'
+"Plug 'git@github.com:chriskempson/vim-tomorrow-theme.git'
+"Plug 'trusktr/seti.vim'
+Plug 'joshdick/onedark.vim'
 
 " Utils
+" Fuzzy search file with crtrl + p
 Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
+" Add end with def method
 Plug 'git@github.com:tpope/vim-endwise.git'
+" Search with grep
 Plug 'git@github.com:mileszs/ack.vim.git'
-Plug 'git@github.com:msanders/snipmate.vim.git'
+" Autocomplete line with tab
 Plug 'git@github.com:ervandew/supertab.git'
+" Remove empty window
 Plug 'git@github.com:duff/vim-scratch.git'
-Plug 'git@github.com:tmhedberg/matchit.git'
-Plug 'git@github.com:ecomba/vim-ruby-refactoring.git'
+" allows you to configure % to match more than just single character
+"Plug 'git@github.com:tmhedberg/matchit.git'
+"Plug 'git@github.com:ecomba/vim-ruby-refactoring.git'
 Plug 'git@github.com:tpope/vim-surround.git'
 Plug 'git@github.com:godlygeek/tabular.git'
-Plug 'git@github.com:sickill/vim-pasta.git'
+"Plug 'git@github.com:sickill/vim-pasta.git'
 Plug 'git@github.com:vim-scripts/taglist.vim.git'
 Plug 'git@github.com:rorymckinley/vim-symbols-strings.git'
-Plug 'git@github.com:nono/vim-handlebars.git'
-Plug 'git@github.com:sjl/threesome.vim.git'
 Plug 'git@github.com:scrooloose/nerdtree.git'
 Plug 'git@github.com:Twinside/vim-cuteErrorMarker.git'
 Plug 'git@github.com:scrooloose/nerdcommenter.git'
 Plug 'git@github.com:scrooloose/syntastic.git'
+"This plug-in provides automatic closing of quotes, parenthesis, brackets, etc.,
 Plug 'git@github.com:Raimondi/delimitMate.git'
 Plug 'git@github.com:majutsushi/tagbar.git'
-Plug 'git@github.com:danchoi/ri.vim.git'
-Plug 'git@github.com:noprompt/vim-yardoc.git'
+" Plug 'git@github.com:danchoi/ri.vim.git'
 Plug 'git@github.com:vim-scripts/grep.vim.git'
-Plug 'git@github.com:thoughtbot/vim-rspec.git'
+" Plug 'git@github.com:thoughtbot/vim-rspec.git'
 Plug 'git@github.com:jistr/vim-nerdtree-tabs.git'
 Plug 'git@github.com:tpope/vim-sensible.git'
-Plug 'git@github.com:nathanaelkane/vim-indent-guides.git'
+"Plug 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Plug 'git@github.com:vim-scripts/tComment.git'
 Plug 'git@github.com:tpope/vim-eunuch.git'
-Plug 'git@github.com:nelstrom/vim-qargs.git'
+"Plug 'git@github.com:nelstrom/vim-qargs.git'
 Plug 'git@github.com:bling/vim-airline.git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'git@github.com:bling/vim-bufferline.git'
-Plug 'git@github.com:terryma/vim-multiple-cursors.git'
-Plug 'git@github.com:tpope/vim-repeat.git'
-Plug 'git@github.com:janko-m/vim-test.git'
-Plug 'git@github.com:jeffkreeftmeijer/vim-numbertoggle.git'
 " Disables the arrow keys, the hjkl keys, the page up/down key
-Plug 'git://github.com/wikitopian/hardmode.git'
-Plug 'edkolev/tmuxline.vim'
-Plug 'mhinz/vim-startify'
+"Plug 'git://github.com/wikitopian/hardmode.git'
+" Plug 'edkolev/tmuxline.vim'
+" Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -86,7 +78,8 @@ set title
 
 " add airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='base16_default'
+" let g:airline_theme='base16_default'
+let g:airline_theme='onedark'
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -107,7 +100,7 @@ set foldmethod=manual
 " set nowrap
 
 " numbering
-set relativenumber
+set number
 
 " Allow undoing after quitting
 " set undodir=~/.vim/undodir
@@ -244,7 +237,7 @@ set showmatch
 set hlsearch
 
 " Search word under cursor in current dir
-:let Grep_Skip_Dirs = '.git tmp public/system doc .yardoc log'
+:let Grep_Skip_Dirs = '.git tmp public doc .yardoc log'
 :let Grep_Skip_Files = '*.bak *~ tags Session.vim'
 nnoremap <C-f> :Rgrep<CR>
 
@@ -252,8 +245,9 @@ nnoremap <C-f> :Rgrep<CR>
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tomorrow theme
-color Tomorrow-Night
-set t_Co=256
+" color Tomorrow-Night
+" set t_Co=256
+colorscheme onedark
 
 " syntax enable
 " set background=dark
@@ -269,7 +263,6 @@ endif
 
 
 " highlight current line
-set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remove arrow to learn vim
@@ -333,25 +326,6 @@ endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-if ! has('gui_running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
-
-" Tabularize
-let mapleader=","
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
 
 " Reload .vimrc
 if has("autocmd")
