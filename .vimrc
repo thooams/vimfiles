@@ -258,8 +258,16 @@ colorscheme onedark
 if system("uname") == "Darwin\n"
   set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 else
-  set guifont=RobotoMono\ Nerd\ Font\ Regular\ 11
+  "set guifont=RobotoMono\ Nerd\ Font\ Regular\ 11
+  set guifont=DroidSansMono\ Nerd\ Font\ 11
 endif
+
+" testing rounded separators (extra-powerline-symbols):
+let g:airline_left_sep = "\uE0C6"
+let g:airline_right_sep = "\uE0C7"
+
+" set the CN (column number) symbol:
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
 
 
 " highlight current line
