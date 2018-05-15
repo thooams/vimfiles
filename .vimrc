@@ -20,6 +20,7 @@ Plug 'sheerun/vim-polyglot'
 "Plug 'git@github.com:chriskempson/vim-tomorrow-theme.git'
 "Plug 'trusktr/seti.vim'
 Plug 'joshdick/onedark.vim'
+"Plug 'mhartington/oceanic-next'
 
 " Utils
 " Fuzzy search file with crtrl + p
@@ -63,6 +64,10 @@ Plug 'git@github.com:bling/vim-bufferline.git'
 "Plug 'git://github.com/wikitopian/hardmode.git'
 " Plug 'edkolev/tmuxline.vim'
 " Plug 'mhinz/vim-startify'
+" To Use "+yy and "+p
+Plug 'git@github.com:cazador481/fakeclip.neovim.git'
+Plug 'thaerkh/vim-indentguides'
+
 
 call plug#end()
 
@@ -76,17 +81,12 @@ set nocompatible
 " diplaying file name in title window
 set title
 
-" add airline
-let g:airline_powerline_fonts=1
-" let g:airline_theme='base16_default'
-let g:airline_theme='onedark'
-
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
 " encoding
-set encoding=utf-8
-set fileencoding=utf-8
+set encoding=UTF-8
+set fileencoding=UTF-8
 
 " Turn off backup and swp files
 set nobackup
@@ -188,8 +188,13 @@ set winaltkeys=no
 
 
 " Icons
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign=0
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:webdevicons_enable_ctrlp = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_airline_tabline = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -249,6 +254,16 @@ nnoremap <C-f> :Rgrep<CR>
 " set t_Co=256
 colorscheme onedark
 
+"" For oceanic Theme
+"colorscheme OceanicNext
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 " syntax enable
 " set background=dark
 " colorscheme solarized
@@ -262,6 +277,11 @@ else
   set guifont=DroidSansMono\ Nerd\ Font\ 11
 endif
 
+" Custom Airline Theme
+let g:airline_powerline_fonts=1
+" let g:airline_theme='base16_default'
+let g:airline_theme='onedark'
+"let g:airline_theme='oceanicnext'
 " testing rounded separators (extra-powerline-symbols):
 let g:airline_left_sep = "\uE0C6"
 let g:airline_right_sep = "\uE0C7"
@@ -353,3 +373,5 @@ if has('persistent_undo')
   let &undodir = myUndoDir
   set undofile
 endif
+
+let g:vim_fakeclip_tmux_plus=1
