@@ -2,7 +2,7 @@
 " Plugins Section -------------------------------
 " -----------------------------------------------
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Git Helpers
 " Use git in vim, :Gedit, :Gsplit, :Gstatus
@@ -34,7 +34,7 @@ Plug 'git@github.com:ervandew/supertab.git'
 " Remove empty window
 Plug 'git@github.com:duff/vim-scratch.git'
 " allows you to configure % to match more than just single character
-"Plug 'git@github.com:tmhedberg/matchit.git'
+Plug 'git@github.com:tmhedberg/matchit.git'
 "Plug 'git@github.com:ecomba/vim-ruby-refactoring.git'
 Plug 'git@github.com:tpope/vim-surround.git'
 Plug 'git@github.com:godlygeek/tabular.git'
@@ -66,7 +66,7 @@ Plug 'git@github.com:bling/vim-bufferline.git'
 " Plug 'mhinz/vim-startify'
 " To Use "+yy and "+p
 Plug 'git@github.com:cazador481/fakeclip.neovim.git'
-Plug 'thaerkh/vim-indentguides'
+"Plug 'thaerkh/vim-indentguides'
 
 
 call plug#end()
@@ -242,7 +242,7 @@ set showmatch
 set hlsearch
 
 " Search word under cursor in current dir
-:let Grep_Skip_Dirs = '.git tmp public doc .yardoc log'
+:let Grep_Skip_Dirs = '.git tmp public doc .yardoc log node_modules vendor'
 :let Grep_Skip_Files = '*.bak *~ tags Session.vim'
 nnoremap <C-f> :Rgrep<CR>
 
@@ -311,10 +311,10 @@ let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Map alt touch for HJKL direction for bépo compatibility
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap ã h
-noremap ô j
-noremap ó k
-noremap ò l
+noremap © h
+noremap þ j
+noremap ß k
+noremap ® l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
@@ -361,7 +361,7 @@ if has("autocmd")
 endif
 
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
+let vimDir = '$HOME/.config/nvim'
 let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
