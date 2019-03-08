@@ -15,6 +15,8 @@ Plug 'git@github.com:Xuyuanp/nerdtree-git-plugin.git'
 Plug 'git@github.com:ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 
+" Resizing windows
+Plug 'git@github.com:simeji/winresizer.git'
 
 " Color sheme
 "Plug 'git@github.com:chriskempson/vim-tomorrow-theme.git'
@@ -316,6 +318,7 @@ noremap þ j
 noremap ß k
 noremap ® l
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -351,6 +354,14 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " us
 if exists("&wildignorecase")
   set wildignorecase
 endif
+
+
+" VimResizer
+let g:winresizer_enable = 1
+let g:winresizer_keycode_left = 99
+let g:winresizer_keycode_right = 114
+let g:winresizer_keycode_up = 115
+let g:winresizer_keycode_down = 116
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
