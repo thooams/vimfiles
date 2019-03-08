@@ -54,6 +54,8 @@ Plug 'git@github.com:majutsushi/tagbar.git'
 Plug 'git@github.com:vim-scripts/grep.vim.git'
 " Plug 'git@github.com:thoughtbot/vim-rspec.git'
 Plug 'git@github.com:jistr/vim-nerdtree-tabs.git'
+" Open/close nerdtree node with l and h
+Plug 'flw-cn/vim-nerdtree-l-open-h-close'
 Plug 'git@github.com:tpope/vim-sensible.git'
 "Plug 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Plug 'git@github.com:vim-scripts/tComment.git'
@@ -318,6 +320,15 @@ noremap þ j
 noremap ß k
 noremap ® l
 
+inoremap © <C-o>h
+inoremap þ <C-o>j
+inoremap ß <C-o>k
+inoremap ® <C-o>l
+
+noremap ſ <C-w>h
+noremap ẞ <C-w>j
+noremap ™ <C-w>k
+noremap ™ <C-w>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
@@ -386,3 +397,7 @@ if has('persistent_undo')
 endif
 
 let g:vim_fakeclip_tmux_plus=1
+
+let g:NERDTreeMapOpenDirNode = '®'
+let g:NERDTreeMapCloseDirNode = '©'
+
