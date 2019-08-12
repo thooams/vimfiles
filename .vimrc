@@ -72,6 +72,14 @@ Plug 'git@github.com:bling/vim-bufferline.git'
 Plug 'git@github.com:cazador481/fakeclip.neovim.git'
 "Plug 'thaerkh/vim-indentguides'
 
+"  IDE tools for the Ruby language.
+"Plug 'hackhowtofaq/vim-solargraph'
+
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
+"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
 
@@ -188,7 +196,7 @@ noremap « :bprev<CR>
 noremap » :bnext<CR>
 
 " Remove altGR key binding to gvim
-set winaltkeys=no
+" set winaltkeys=no
 
 
 " Icons
@@ -264,8 +272,10 @@ colorscheme onedark
 "let g:oceanic_next_terminal_italic = 1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-if (has("termguicolors"))
-  set termguicolors
+if has("termguicolors")     " set true colors
+    set t_8f=\[[38;2;%lu;%lu;%lum
+    set t_8b=\[[48;2;%lu;%lu;%lum
+    set termguicolors
 endif
 
 " syntax enable
@@ -292,6 +302,7 @@ let g:airline_right_sep = "\uE0C7"
 
 " set the CN (column number) symbol:
 let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+let g:airline#extensions#tabline#enabled = 0
 
 
 " highlight current line
@@ -315,21 +326,21 @@ let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Map alt touch for HJKL direction for bépo compatibility
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap © h
-noremap þ j
-noremap ß k
-noremap ® l
-
-inoremap © <C-o>h
-inoremap þ <C-o>j
-inoremap ß <C-o>k
-inoremap ® <C-o>l
-
-noremap ſ <C-w>h
-noremap ẞ <C-w>j
-noremap ™ <C-w>k
-noremap ™ <C-w>l
-
+" noremap þ h
+" noremap ß j
+" noremap ® k
+" noremap ~ l
+"
+" inoremap þ <C-o>h
+" inoremap ß <C-o>j
+" inoremap ® <C-o>k
+" inoremap ~ <C-o>l
+"
+" noremap Þ <C-w>h
+" noremap ẞ <C-w>j
+" noremap ™ <C-w>k
+" noremap ™ <C-w>l
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -400,4 +411,31 @@ let g:vim_fakeclip_tmux_plus=1
 
 let g:NERDTreeMapOpenDirNode = '®'
 let g:NERDTreeMapCloseDirNode = '©'
+
+
+" To Make a safe markdown
+augroup Markdown
+  autocmd!
+  autocmd FileType markdown set wrap
+augroup END
+
+
+"
+" " Begin For solargraph
+" " Don't send a stop signal to the server when exiting vim.
+" " This is optional, but I don't like having to restart Solargraph
+" " every time I restart vim.
+" let g:LanguageClient_autoStop = 0
+" let g:LanguageClient_serverCommands = {
+"     \ 'ruby': ['tcp://localhost:7658']
+"     \ }
+"
+" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+"
+" " Configure ruby omni-completion to use the language client:
+" autocmd FileType ruby setlocal omnifunc=LanguageClient#complete
+" " End For solargraph
 
