@@ -181,6 +181,7 @@ set virtualedit=all
 
 " set clipboard
 set clipboard+=unnamedplus
+let g:loaded_clipboard_provider = 1
 
 " Add spell orthographe
 map <F9> :setlocal spell! spelllang=en<CR>
