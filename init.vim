@@ -72,8 +72,10 @@ Plug 'terryma/vim-multiple-cursors'
 " Plug 'edkolev/tmuxline.vim'
 " Plug 'mhinz/vim-startify'
 " To Use "+yy and "+p
-Plug 'git@github.com:cazador481/fakeclip.neovim.git'
+" Plug 'git@github.com:cazador481/fakeclip.neovim.git'
 "Plug 'thaerkh/vim-indentguides'
+
+Plug 'git@github.com:chrisbra/Colorizer.git'
 
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -181,7 +183,7 @@ set virtualedit=all
 
 " set clipboard
 set clipboard+=unnamedplus
-let g:loaded_clipboard_provider = 1
+" let g:loaded_clipboard_provider = 1
 
 " Add spell orthographe
 map <F9> :setlocal spell! spelllang=en<CR>
@@ -413,6 +415,11 @@ endif
 " Font gui
 set guifont=Hack\ Nerd\ Font\ Regular:h16
 
+
+" Colorize css hexa colors
+let g:colorizer_auto_color = 1
+let g:colorizer_auto_filetype='css,html,sass,scss'
+
 " Custom Airline Theme
 let g:airline_powerline_fonts=1
 " let g:airline_theme='base16_default'
@@ -532,8 +539,6 @@ if has('persistent_undo')
   let &undodir = myUndoDir
   set undofile
 endif
-
-let g:vim_fakeclip_tmux_plus=1
 
 let g:NERDTreeMapOpenDirNode = '®'
 let g:NERDTreeMapCloseDirNode = '©'
