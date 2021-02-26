@@ -37,44 +37,26 @@ Plug 'git@github.com:ervandew/supertab.git'
 Plug 'git@github.com:duff/vim-scratch.git'
 " allows you to configure % to match more than just single character
 Plug 'git@github.com:tmhedberg/matchit.git'
-"Plug 'git@github.com:ecomba/vim-ruby-refactoring.git'
 Plug 'git@github.com:tpope/vim-surround.git'
 Plug 'git@github.com:godlygeek/tabular.git'
-"Plug 'git@github.com:sickill/vim-pasta.git'
 Plug 'git@github.com:vim-scripts/taglist.vim.git'
 Plug 'git@github.com:rorymckinley/vim-symbols-strings.git'
 Plug 'git@github.com:scrooloose/nerdtree.git'
-" Plug 'git@github.com:Twinside/vim-cuteErrorMarker.git'
 Plug 'dense-analysis/ale'
 Plug 'git@github.com:scrooloose/nerdcommenter.git'
-Plug 'git@github.com:scrooloose/syntastic.git'
+" Plug 'git@github.com:scrooloose/syntastic.git'
 "This plug-in provides automatic closing of quotes, parenthesis, brackets, etc.,
 Plug 'git@github.com:Raimondi/delimitMate.git'
 Plug 'git@github.com:majutsushi/tagbar.git'
-" Plug 'git@github.com:danchoi/ri.vim.git'
 Plug 'git@github.com:vim-scripts/grep.vim.git'
-" Plug 'git@github.com:thoughtbot/vim-rspec.git'
 Plug 'git@github.com:jistr/vim-nerdtree-tabs.git'
 " Open/close nerdtree node with l and h
 Plug 'flw-cn/vim-nerdtree-l-open-h-close'
 Plug 'git@github.com:tpope/vim-sensible.git'
-"Plug 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Plug 'git@github.com:vim-scripts/tComment.git'
 Plug 'git@github.com:tpope/vim-eunuch.git'
-"Plug 'git@github.com:nelstrom/vim-qargs.git'
 Plug 'git@github.com:bling/vim-airline.git'
 Plug 'vim-airline/vim-airline-themes'
-" Show the bracket, parenthesis in multi-color
-Plug 'terryma/vim-multiple-cursors'
-" Plug 'git@github.com:bling/vim-bufferline.git'
-" Disables the arrow keys, the hjkl keys, the page up/down key
-"Plug 'git://github.com/wikitopian/hardmode.git'
-" Plug 'edkolev/tmuxline.vim'
-" Plug 'mhinz/vim-startify'
-" To Use "+yy and "+p
-" Plug 'git@github.com:cazador481/fakeclip.neovim.git'
-"Plug 'thaerkh/vim-indentguides'
-
 Plug 'git@github.com:chrisbra/Colorizer.git'
 
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -137,8 +119,10 @@ endif
 " let g:ale_fix_on_save = 1
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_ruby_rubocop_options = '-c rubocop.yml'
-let g:ale_completion_enabled = 1
-set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_enabled = 0
+" let g:ale_linters_explicit = 1
+" set omnifunc=ale#completion#OmniFunc
+set omnifunc=syntaxcomplete#Complete
 
 set completeopt=menu,menuone,preview,noselect,noinsert
 
