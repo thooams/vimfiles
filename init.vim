@@ -59,7 +59,7 @@ Plug 'git@github.com:bling/vim-airline.git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'git@github.com:chrisbra/Colorizer.git'
 
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " -----------------------------------------------
