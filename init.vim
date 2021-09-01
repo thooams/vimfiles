@@ -59,6 +59,8 @@ Plug 'git@github.com:bling/vim-airline.git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'git@github.com:chrisbra/Colorizer.git'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -146,7 +148,7 @@ set mouse=a
 "set ttymouse=xterm
 
 " Make searches case-sensitive only if they contain upper-case characters
-set ignorecase
+set noignorecase
 set smartcase
 
 " better terminal experience
@@ -367,8 +369,8 @@ set showmatch
 set hlsearch
 
 " Search word under cursor in current dir
-:let Grep_Skip_Dirs = '.git tmp public doc .yardoc log node_modules vendor'
-:let Grep_Skip_Files = '*.bak *~ tags Session.vim'
+:let Grep_Skip_Dirs = '.git tmp public doc .yardoc log coverage storage node_modules vendor'
+:let Grep_Skip_Files = '*.bak *~ tags Session.vim *.pdf *.log'
 nnoremap <C-f> :Rgrep<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -477,7 +479,7 @@ if system("uname") == "Darwin\n"
 else
   let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 endif
-set tags=tag
+set tags+=./.git/tags,./tags
 let Tlist_WinWidth = 50
 noremap <f6> :TlistToggle<cr>
 let Tlist_Process_File_Always = 1
