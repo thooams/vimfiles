@@ -26,7 +26,7 @@ Plug 'joshdick/onedark.vim'
 
 " Utils
 " Fuzzy search file with crtrl + p
-Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
+" Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
 " Add end with def method
 Plug 'git@github.com:tpope/vim-endwise.git'
 " Search with grep
@@ -61,7 +61,30 @@ Plug 'git@github.com:chrisbra/Colorizer.git'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+" optional for icon support
+Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'git@github.com:github/copilot.vim'
+
+" cmus remote control
+Plug 'azadkuh/vim-cmus'
+
+" Sticky Scroll : https://github.com/nvim-treesitter/nvim-treesitter-context
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
+
+Plug 'nvim-lua/plenary.nvim'
+" telescope.nvim is a highly extendable fuzzy finder over lists. Built on the latest awesome features from neovim core. Telescope is centered around modularity, allowing for easy customization.
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+
 call plug#end()
 
 " -----------------------------------------------
@@ -486,13 +509,13 @@ let Tlist_Process_File_Always = 1
 let Tlist_Use_Right_Window = 1
 
 " Ctrlp configuration
-let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
-let g:ctrlp_working_path_mode = 2              " set the working dir at  the nearest ancestor that contains .git
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so/*,*/doc/*,*/node_modules/*,*/tmp/*,*/vendor/*,*.jpg,*.png,*.gif,*.ico,*.jpeg " ignore some files
-"let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn|jpg|gif|png|jpeg|ico)|(doc))$'
-"let g:ctrlp_custom_ignore = '.git\|hg\|svn\|doc|'
-"let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
-" let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " use git to list files (faster) except => doc
+" let g:ctrlp_map = '<c-p>'                      " keyboard shortcur
+" let g:ctrlp_working_path_mode = 2              " set the working dir at  the nearest ancestor that contains .git
+" set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so/*,*/doc/*,*/node_modules/*,*/tmp/*,*/vendor/*,*.jpg,*.png,*.gif,*.ico,*.jpeg " ignore some files
+" "let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn|jpg|gif|png|jpeg|ico)|(doc))$'
+" "let g:ctrlp_custom_ignore = '.git\|hg\|svn\|doc|'
+" "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to list files (faster)
+" " let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files | grep -v doc'] " use git to list files (faster) except => doc
 
 if exists("&wildignorecase")
   set wildignorecase
@@ -560,3 +583,29 @@ augroup neovim_terminal
   " Disables number lines on terminal buffers
   autocmd TermOpen * :set nonumber norelativenumber
 augroup END
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fl <cmd>Telescope live_grep<cr>
+nnoremap <leader>fg <cmd>Telescope git_files<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" nnoremap <c-p> <cmd>Telescope git_files<cr>
+
+let g:LanguageClient_autoStop = 0
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['tcp://localhost:7658']
+    \ }
+
+" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+autocmd FileType ruby setlocal omnifunc=LanguageClient#complete
+
+
+noremap Zz <c-w>_ \| <c-w>\|
+noremap Zo <c-w>=
