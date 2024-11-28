@@ -6,6 +6,3 @@ vim.o.statuscolumn = "%s %l %r"
 -- Set to "solargraph" to use solargraph instead of ruby_lsp.
 vim.g.lazyvim_ruby_lsp = "ruby_lsp"
 vim.g.lazyvim_ruby_formatter = "rubocop"
--- vim.cmd.colorscheme = "catppuccin-macchiato"
--- vim.cmd.colors_name = "catppuccino-macchiato"
--- vim.g.colors_name = "catppuccino-macchiato"
