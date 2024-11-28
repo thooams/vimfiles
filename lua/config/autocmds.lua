@@ -5,3 +5,9 @@
 -- Set to "solargraph" to use solargraph instead of ruby_lsp.
 vim.g.lazyvim_ruby_lsp = "ruby_lsp"
 vim.g.lazyvim_ruby_formatter = "rubocop"
+
+-- Remove trailing whitespace on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = "%s/\\s\\+$//e",
+})
